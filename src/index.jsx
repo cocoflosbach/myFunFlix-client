@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import { App } from "./Components/App/App";
 
 import "./index.scss";
 
@@ -7,7 +8,7 @@ class MyFunFlixApplication extends Component {
   render() {
     return (
       <div className="my-fun-flix">
-        <div>Good morning</div>
+        <App />
       </div>
     );
   }
