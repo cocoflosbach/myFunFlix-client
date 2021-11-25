@@ -4,6 +4,7 @@ import { MovieCard } from "../Movie-Card/MovieCard";
 import { LoginView } from "../Login-View/Login";
 import { MovieView } from "../Movie-View/MovieView";
 import { RegistrationView } from "../Registration-View/Registration";
+import { Row, Col } from "react-bootstrap";
 
 export class App extends Component {
   constructor(props) {
@@ -47,26 +48,30 @@ export class App extends Component {
     if (movies.length === 0) return <div className="App" />;
 
     return (
-      <div className="main-view">
+      <Row className="main-view justify-content-md-center">
         {selectedMovie ? (
-          <MovieView
-            movie={selectedMovie}
-            onBackClick={(newSelectedMovie) => {
-              this.setSelectedMovie(newSelectedMovie);
-            }}
-          />
-        ) : (
-          movies.map((movie) => (
-            <MovieCard
-              key={movie._id}
-              movie={movie}
-              onMovieClick={(newSelectedMovie) => {
+          <Col md={8}>
+            <MovieView
+              movie={selectedMovie}
+              onBackClick={(newSelectedMovie) => {
                 this.setSelectedMovie(newSelectedMovie);
               }}
             />
+          </Col>
+        ) : (
+          movies.map((movie) => (
+            <Col md={3}>
+              <MovieCard
+                key={movie._id}
+                movie={movie}
+                onMovieClick={(newSelectedMovie) => {
+                  this.setSelectedMovie(newSelectedMovie);
+                }}
+              />
+            </Col>
           ))
         )}
-      </div>
+      </Row>
     );
   }
 }

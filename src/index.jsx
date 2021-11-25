@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { App } from "./Components/App/App";
+import { Container } from "react-bootstrap";
 
 import "./index.scss";
 
 class MyFunFlixApplication extends Component {
   render() {
     return (
-      <div className="my-fun-flix">
+      <Container className="my-fun-flix">
         <App />
-      </div>
+      </Container>
     );
   }
 }
