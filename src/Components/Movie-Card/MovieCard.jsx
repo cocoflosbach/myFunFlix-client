@@ -2,15 +2,16 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import { Button, Row, Col, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./MovieCard.scss";
 
 export class MovieCard extends Component {
   render() {
-    const { movie, onMovieClick } = this.props;
+    const { movie } = this.props;
     return (
-      <Row>
-        <Col></Col>
-        <Col>
-          <Card style={{ width: "18rem" }}>
+      <Row className="Moviecard">
+        <Col md sm className="Moviecard">
+          <Card style={{ width: "18rem" }} className="cards">
             <Card.Img
               crossOrigin="https://imgur.com"
               variant="top"
@@ -18,13 +19,9 @@ export class MovieCard extends Component {
             />
             <Card.Body>
               <Card.Title>{movie.Title}</Card.Title>
-              <Button
-                onClick={() => {
-                  onMovieClick(null);
-                }}
-              >
-                See More
-              </Button>
+              <Link to={`/movies/${movie._id}`}>
+                <Button variant="warning">See More</Button>
+              </Link>
             </Card.Body>
           </Card>
           {/* <Link to={`/directors/${movie.Director.Name}`}>
@@ -35,7 +32,6 @@ export class MovieCard extends Component {
                   <Button variant="warning">Genre</Button>
                 </Link> */}
         </Col>
-        <Col></Col>
       </Row>
     );
   }
@@ -46,7 +42,6 @@ MovieCard.propTypes = {
     Title: PropTypes.string.isRequired,
     ImagePath: PropTypes.string.isRequired,
   }).isRequired,
-  onMovieClick: PropTypes.func.isRequired,
 };
 
 /* <div className="MovieCard">
