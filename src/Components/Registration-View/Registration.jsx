@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Form, Button, Row, Col, Card, CardGroup } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export function RegistrationView(props) {
   const [username, setUsername] = useState("");
@@ -9,8 +11,22 @@ export function RegistrationView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(username, password, email, birthday);
-    // props.onLoggedIn(username);
+    axios
+      .post("https://my-flix-2406.herokuapp.com/users", {
+        Username: username,
+        Password: password,
+        Email: email,
+        Birthday: birthday,
+      })
+      .then((response) => {
+        const data = response.data;
+        console.log(data);
+        window.open("/", "_self"); //Second argument is neccessary so that the page will open in the current tab
+        navigate("/login");
+      })
+      .catch((e) => {
+        console.log("There was an error registering this user");
+      });
   };
 
   return (
@@ -75,9 +91,11 @@ export function RegistrationView(props) {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                   <Form.Label> Already Registered? </Form.Label> {}
                   <br />
-                  <Button variant="warning" type="submit">
-                    Login Here
-                  </Button>
+                  <Link to={`/`}>
+                    <Button variant="warning" type="submit">
+                      Login Here
+                    </Button>
+                  </Link>
                 </Form.Group>
               </Form>
             </Card.Body>
