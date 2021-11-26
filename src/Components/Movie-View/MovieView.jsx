@@ -1,44 +1,94 @@
 import React, { Component } from "react";
+import axios from "axios";
 import PropTypes from "prop-types";
 
-import { Button, Row, Col, Card } from "react-bootstrap";
+import { Container, Button, Row, Col, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./MovieView.scss";
 
 export class MovieView extends Component {
+  AddFavMovie(_id) {
+    const token = localStorage.getItem("token");
+    const username = localStorage.getItem("user");
+    axios
+      .post(
+        `https://my-flix-2406.herokuapp.com/users/${username}/movies/${this.movie._id}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      )
+      .then((response) => {
+        console.log(response);
+        const data = response.data;
+        alert("Added to Favorite Movie List").catch((e) => {
+          console.log("e", "Favorite Movie not added");
+        });
+      });
+  }
   render() {
     const { movie, onBackClick } = this.props;
 
     return (
-      <Row>
-        <Col></Col>
-        <Col>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              crossOrigin="https://imgur.com"
-              variant="top"
-              src={movie.ImagePath}
-            />
-            <Card.Body>
-              <Card.Title>{movie.Title}</Card.Title>
-              <Card.Text>{movie.Description}</Card.Text>
-              <button
-                onClick={() => {
-                  onBackClick(null);
-                }}
-              >
-                Back
-              </button>
-            </Card.Body>
-            {/*  <Link to="director/name">
-              <Button variant="warning">Director</Button>
-            </Link>
-            <br />
-            <Link to="genre/name">
-              <Button variant="warning">Genre</Button>
-            </Link> */}
+      <Container className="Movieview">
+        <Row>
+          <Col></Col>
+          <Col>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                className="Movieview-img"
+                crossOrigin="https://imgur.com"
+                variant="top"
+                src={movie.ImagePath}
+              />
+              <Card.Body>
+                <Card.Title className="Movieview-title">
+                  {movie.Title}
+                </Card.Title>
+                <Card.Text className="Movieview-text">
+                  {movie.Description}
+                </Card.Text>
+                <Button
+                  className="Movieview-Button"
+                  variant="warning"
+                  onClick={this.AddFavMovie}
+                >
+                  Add to Favorites
+                </Button>
+                <br />
+                <br />
+                <Button
+                  className="Movieview-Button"
+                  variant="warning"
+                  onClick={() => {
+                    onBackClick(null);
+                  }}
+                >
+                  Back
+                </Button>
+                <br />
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col></Col>
+        </Row>
+        <Row className="MovieView-GD-Buttons">
+          <Card>
+            <Col>
+              <Link to={`/directors/${movie.Director.Name}`}>
+                <Button className="Movieview-Button" variant="warning">
+                  Director
+                </Button>
+              </Link>
+              {"    "}
+              <Link to={`/genres/${movie.Genre.Name}`}>
+                <Button className="Movieview-Button" variant="warning">
+                  Genre
+                </Button>
+              </Link>
+            </Col>
           </Card>
-        </Col>
-        <Col></Col>
-      </Row>
+        </Row>
+      </Container>
     );
   }
 }
