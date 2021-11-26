@@ -1,6 +1,16 @@
 import React from "react";
 import axios from "axios";
-import { MovieCard } from "../Movie-Card/MovieCard";
+import { connect } from "react-redux";
+
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+
+// Redux step 1: import the SET_MOVIES action
+import { setMovies } from "../../actions/Actions";
+
+// Redux step 2: Create anad import new MovieList component
+import MovieList from "../Movie-List/MovieList";
+
+// Redux step 3: Remove MovieCard component import command
 /*import { MovieCard } from "../Movie-Card/MovieCard";*/
 import { LoginView } from "../Login-View/Login";
 import { MovieView } from "../Movie-View/MovieView";
@@ -14,13 +24,17 @@ import { NavigationBar } from "../navigation-bar/navigation-bar";
 
 import "./App.scss";
 
-export class App extends Component {
+// Redux step 4: Remove "export" keyword
+/*export*/
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      movies: [],
+      // SetMovies Redux step 5: Remove movies state from this.state
+      /*movies: [],*/
       selectedMovie: null,
       user: null,
+      username: null,
     };
   }
 
@@ -40,6 +54,9 @@ export class App extends Component {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
+        // SetMovies Redux step 6: Replace setState with "props.setMovies"
+        /*this.setState({ movies: response.data });*/
+        this.props.setMovies(response.data);
       })
       .catch(function (error) {
         console.log(error);
@@ -76,7 +93,9 @@ export class App extends Component {
   } */
 
   render() {
-    const { movies, selectedMovie, user } = this.state;
+    // SetMovies Redux step 7: movies is extracted from this.props rather than this.state
+    const { movies } = this.props;
+    const { user } = this.state;
 
     return (
       <Router>
@@ -95,6 +114,10 @@ export class App extends Component {
                 );
               if (movies.length === 0) return <div className="App" />;
               return (
+                // SetMovies Redux step 8: Replace MovieCard with MovieList component
+                /*movies.map((m) => (<Col key={m._id}>
+                  <MovieCard movie={m} />
+                </Col>*/
                 <Col>
                   <MovieList movies={movies} />
                 </Col>
@@ -195,3 +218,12 @@ export class App extends Component {
     );
   }
 }
+
+// SetMovies Redux step 9:
+let mapStateToProps = (state) => {
+  return { movies: state.movies };
+};
+//mapStateToProps allows a component to subscribe to store updates
+
+// SetMovies Redux step 10:
+export default connect(mapStateToProps, { setMovies })(App); // connecting a component with an action allows you to receive the actual action as a prop
