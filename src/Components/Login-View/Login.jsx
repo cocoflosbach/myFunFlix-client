@@ -1,5 +1,7 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Form, Button, Row, Col, Card, CardGroup } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export function LoginView(props) {
   const [username, setUsername] = useState("");
@@ -7,8 +9,19 @@ export function LoginView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(username, password);
-    // props.onLoggedIn(username);
+    axios
+      .post("https://my-flix-2406.herokuapp.com/login", {
+        Username: username,
+        Password: password,
+      })
+      .then((response) => {
+        const data = response.data;
+        console.log(username, password);
+        props.onLoggedIn(data);
+      })
+      .catch((e) => {
+        console.log("No such User");
+      });
   };
 
   return (
@@ -48,9 +61,11 @@ export function LoginView(props) {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                   <Form.Label> New User? </Form.Label> {}
                   <br />
-                  <Button variant="warning" type="submit">
-                    Register Here
-                  </Button>
+                  <Link to={`/register`}>
+                    <Button variant="warning" type="submit">
+                      Register Here
+                    </Button>
+                  </Link>
                 </Form.Group>
               </Form>
             </Card.Body>
