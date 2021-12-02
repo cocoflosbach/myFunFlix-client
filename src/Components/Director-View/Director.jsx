@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "tailwindcss/tailwind.css";
 
 export class DirectorView extends Component {
   render() {

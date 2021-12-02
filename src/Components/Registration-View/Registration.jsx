@@ -119,7 +119,7 @@ export function RegistrationView(props) {
               type="submit"
               onClick={handleSubmit}
             >
-              Register
+              Update
             </button>
           </div>
           <div>

@@ -20,14 +20,15 @@ export class NavigationBar extends React.Component {
     const { user } = this.props;
     const movies = `/`;
     const profile = `/users/${user}`;
-    /* const navigation = [
+    const navigation = [
       { name: "Movies", href: `/`, current: true },
       { name: "Profile", href: `/users/${user}`, current: true },
+      { name: "Logout", href: `/`, current: true },
     ];
-    const classNames = (...classes) => {
+    /* const classNames = (...classes) => {
       return classes.filter(Boolean).join(" ");
-    }; */
-
+    };
+ */
     return (
       <Disclosure
         as="nav"
@@ -74,6 +75,7 @@ export class NavigationBar extends React.Component {
                           {({ active }) => (
                             <a
                               as={Link}
+                              key={navigation.name}
                               href={profile}
                               className={
                                 (active ? "bg-gray-100" : "",
@@ -88,6 +90,7 @@ export class NavigationBar extends React.Component {
                           {({ active }) => (
                             <a
                               as={Link}
+                              key={navigation.name}
                               href={movies}
                               className={
                                 (active ? "bg-gray-100" : "",
@@ -102,6 +105,7 @@ export class NavigationBar extends React.Component {
                           {({ active }) => (
                             <a
                               href={"/"}
+                              key={navigation.name}
                               onClick={this.onLoggedOut}
                               className={
                                 (active ? "bg-gray-100" : "",

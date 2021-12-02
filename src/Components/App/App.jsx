@@ -23,7 +23,7 @@ import { Row, Col } from "react-bootstrap";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
 
 import "./App.scss";
-
+import "tailwindcss/tailwind.css";
 // Redux step 4: Remove "export" keyword
 /*export*/
 class App extends React.Component {
@@ -81,29 +81,6 @@ class App extends React.Component {
       user: null,
     });
   }
-
-  /* addFavoriteMovie() {
-    const token = localStorage.getItem("token");
-    const username = localStorage.getItem("username");
-
-    axios
-      .post(
-        `https://my-flix-2406.herokuapp.com/users/${username}/movies/${movie._id}`,
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      )
-      .then((response) => {
-        console.log(response);
-        this.setState({
-          favoriteMovies: response.data,
-        });
-        alert(`Added to Favorites`);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  } */
 
   /* onUserUpdate(authData) {
       console.log(authData);

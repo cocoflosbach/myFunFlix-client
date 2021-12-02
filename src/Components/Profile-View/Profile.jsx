@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 import "tailwindcss/tailwind.css";
 import { MovieCard } from "../Movie-Card/MovieCard";
+import { MovieView } from "../Movie-View/MovieView";
 
 export class Profile extends Component {
   constructor(props) {
@@ -16,13 +17,16 @@ export class Profile extends Component {
       password: null,
       email: null,
       birthday: null,
+      favoriteMovies: [],
     };
   }
 
   componentDidMount() {
     let accessToken = localStorage.getItem("token");
     if (accessToken !== null) {
-      this.getUser(accessToken);
+      this.setState({
+        user: localStorage.getItem("user"),
+      });
     }
   }
 
@@ -40,13 +44,11 @@ export class Profile extends Component {
           email: response.data.Email,
           birthday: response.data.Birthday,
           favoriteMovies: response.data.FavoriteMovies,
-        }).catch((e) => {
-          console.log("User not found");
         });
       });
   }
 
-  removeFavMovie() {
+  /* removeFavMovie() {
     axios
       .delete(
         `https://my-flix-2406.herokuapp.com/users/${username}/movies/${movies._id}`,
@@ -59,7 +61,7 @@ export class Profile extends Component {
           console.log("This movie was not deleted");
         });
       });
-  }
+  } */
 
   onUserUpdate(authData) {
     console.log(authData);
@@ -90,8 +92,9 @@ export class Profile extends Component {
   }
 
   render() {
-    const { username, password, email, birthday } = this.state;
-    const { movies, user, favoriteMovies } = this.props;
+    const { username, password, email, birthday, favoriteMovies } = this.state;
+    const { movies, user } = this.props;
+    /* const movie = movies.find((movie) => movie._id === match.params.movieId); */
     return (
       <div>
         <div>
@@ -102,16 +105,36 @@ export class Profile extends Component {
             birthday={birthday}
           />
         </div>
-        <div>
-          <UpdateUser onUserUpdate={(user) => this.onUserUpdate(user)} />
-        </div>
-        <div>
-          {/* {favoriteMovies.map((m) => ( */}
 
-          <FavMovies movies={movies} favoriteMovies={favoriteMovies} />
-
-          {/* ))} */}
+        <div>
+          <UpdateUser
+            username={username}
+            onUserUpdate={(user) => this.onUserUpdate(user)}
+          />
         </div>
+
+        <div>
+          <div>
+            <h2 className="mt-6 text-center text-2xl font-extrabold text-gray-900">
+              Your Favorite Movies
+            </h2>
+          </div>
+
+          <div>
+            {favoriteMovies.map((movie) => (
+              <div key={movie._id} className="group relative ">
+                <FavMovies movies={movies} favoriteMovies={favoriteMovies} />
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* <div className=" grid grid-cols-1 gap-y-5 gap-x-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-x-8 ">
+          {filteredMovies.map((movie) => (
+            <div key={movie.id} className="group relative ">
+              <MovieCard movie={movie} movies={movies} />
+            </div>
+          ))}
+        </div> */}
       </div>
     );
   }
