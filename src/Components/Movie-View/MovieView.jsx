@@ -1,35 +1,133 @@
 import React, { Component } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { NavigationBar } from "../navigation-bar/navigation-bar";
 
-import { Container, Button, Row, Col, Card } from "react-bootstrap";
+/* import { Container, Button, Row, Col, Card } from "react-bootstrap"; */
 import { Link } from "react-router-dom";
 import "./MovieView.scss";
+import "tailwindcss/tailwind.css";
 
 export class MovieView extends Component {
-  AddFavMovie(_id) {
+  addFavoriteMovie(props) {
     const token = localStorage.getItem("token");
-    const username = localStorage.getItem("user");
+    const username = localStorage.getItem("username");
+
     axios
       .post(
-        `https://my-flix-2406.herokuapp.com/users/${username}/movies/${this.movie._id}`,
+        `https://my-flix-2406.herokuapp.com/users/${username}/movies/${this.props.movie._id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       )
       .then((response) => {
         console.log(response);
-        const data = response.data;
-        alert("Added to Favorite Movie List").catch((e) => {
-          console.log("e", "Favorite Movie not added");
-        });
+        alert(`Added to Favorites`);
+      })
+      .catch(function (error) {
+        console.log(error);
       });
   }
+  removeFavoriteMovie(props) {
+    const token = localStorage.getItem("token");
+    const username = localStorage.getItem("username");
+
+    axios
+      .delete(
+        `https://my-flix-2406.herokuapp.com/users/${username}/movies/${this.props.movie._id}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      )
+      .then((response) => {
+        console.log(response);
+        alert(`Removed from Favorites`);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   render() {
-    const { movie, onBackClick } = this.props;
+    const { movie, onBackClick, movies, movieID } = this.props;
 
     return (
-      <Container className="Movieview">
+      <div className="bg-white ">
+        <div className=" max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+          <div>
+            <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-screen lg:aspect-none">
+              <img
+                crossOrigin="https://imgur.com"
+                variant="top"
+                src={movie.ImagePath}
+                className="w-full h-full object-center object-cover lg:w-full lg:h-full"
+              />
+            </div>
+            <div className="mt-4 flex justify-between">
+              <div>
+                <h3 className="text-lg justify-center font-extrabold text-black">
+                  <span aria-hidden="true" className="absolute inset-0" />
+                  {movie.Title}
+                </h3>
+                <p className="mt-1 text-sm text-gray-500">
+                  {movie.Description}
+                </p>
+              </div>
+              {/* <p className="text-sm font-medium text-gray-900">
+                
+              </p> */}
+            </div>
+
+            <div className=" mt-4 grid grid-cols-1 gap-y-5 gap-x-3 sm:grid-cols-2">
+              <Link to={`/directors/${movie.Director.Name}`}>
+                <button
+                  className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                  variant="warning"
+                >
+                  Director
+                </button>
+              </Link>
+              {"    "}
+              <Link to={`/genres/${movie.Genre.Name}`}>
+                <button
+                  className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                  variant="warning"
+                >
+                  Genre
+                </button>
+              </Link>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                onClick={() => {
+                  onBackClick(null);
+                }}
+                className="mt-4 group relative  flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                type="submit"
+              >
+                Back
+              </button>
+            </div>
+            <div>
+              <button
+                variant="warning"
+                className="mt-4 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                value={movie._id}
+                onClick={() => {
+                  this.addFavoriteMovie(movie);
+                }}
+              >
+                Add to Favorites
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      /* <Container className="Movieview">
         <Row>
           <Col></Col>
           <Col>
@@ -47,12 +145,26 @@ export class MovieView extends Component {
                 <Card.Text className="Movieview-text">
                   {movie.Description}
                 </Card.Text>
+
                 <Button
-                  className="Movieview-Button"
                   variant="warning"
-                  onClick={this.AddFavMovie}
+                  className="fav-button"
+                  value={movie._id}
+                  onClick={() => {
+                    this.addFavoriteMovie(movie);
+                  }}
                 >
                   Add to Favorites
+                </Button>
+
+                <Button
+                  className="remove-fav"
+                  variant="warning"
+                  onClick={() => {
+                    this.removeFavoriteMovie(movie);
+                  }}
+                >
+                  Remove from Favorites
                 </Button>
                 <br />
                 <br />
@@ -88,7 +200,7 @@ export class MovieView extends Component {
             </Col>
           </Card>
         </Row>
-      </Container>
+      </Container> */
     );
   }
 }
@@ -101,24 +213,3 @@ MovieView.propTypes = {
   }).isRequired,
   onBackClick: PropTypes.func.isRequired,
 };
-
-/* <div className="movie-view">
-        <div className="movie-poster">
-          <img crossOrigin="https://imgur.com" src={movie.ImagePath} />
-        </div>
-        <div className="movie-title">
-          <span className="label">Title: </span>
-          <span className="value">{movie.Title}</span>
-        </div>
-        <div className="movie-description">
-          <span className="label">Description: </span>
-          <span className="value">{movie.Description}</span>
-        </div>
-        <button
-          onClick={() => {
-            onBackClick(null);
-          }}
-        >
-          Back
-        </button>
-      </div> */

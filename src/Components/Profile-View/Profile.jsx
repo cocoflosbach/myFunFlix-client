@@ -3,19 +3,10 @@ import React, { Component } from "react";
 import FavMovies from "./FavMovies";
 import UpdateUser from "./UpdateUser";
 import UserInfo from "./UserInfo";
-import {
-  Form,
-  Button,
-  Row,
-  Col,
-  Figure,
-  Card,
-  CardGroup,
-  Container,
-  ListGroup,
-  ListGroupItem,
-  CardDeck,
-} from "react-bootstrap";
+import { Link } from "react-router-dom";
+
+import "tailwindcss/tailwind.css";
+import { MovieCard } from "../Movie-Card/MovieCard";
 
 export class Profile extends Component {
   constructor(props) {
@@ -25,7 +16,6 @@ export class Profile extends Component {
       password: null,
       email: null,
       birthday: null,
-      favoriteMovies: null,
     };
   }
 
@@ -56,17 +46,6 @@ export class Profile extends Component {
       });
   }
 
-  onUserUpdate(authData) {
-    console.log(authData);
-    this.setState({
-      password: response.data.Password,
-      email: response.data.Email,
-    });
-    localStorage.setItem("token", authData.token);
-    localStorage.setItem("user", authData.token);
-    this.getUser(authData.token);
-  }
-
   removeFavMovie() {
     axios
       .delete(
@@ -80,6 +59,16 @@ export class Profile extends Component {
           console.log("This movie was not deleted");
         });
       });
+  }
+
+  onUserUpdate(authData) {
+    console.log(authData);
+    this.setState({
+      user: authData.user.Username,
+    });
+    localStorage.setItem("token", authData.token);
+    localStorage.setItem("user", authData.user.Username);
+    this.getUser(authData.token);
   }
 
   handleDeleteUser() {
@@ -101,31 +90,32 @@ export class Profile extends Component {
   }
 
   render() {
-    const { username, password, email, birthday, favoriteMovies } = this.state;
-    const { movies, user } = this.props;
+    const { username, password, email, birthday } = this.state;
+    const { movies, user, favoriteMovies } = this.props;
     return (
-      <Container>
-        <Row>
-          <Col>
-            <UserInfo
-              username={username}
-              password={password}
-              email={email}
-              birthday={birthday}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <UpdateUser onUserUpdate={(user) => this.onUserUpdate(user)} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <FavMovies movies={movies} favMovies={favoriteMovies} />
-          </Col>
-        </Row>
-      </Container>
+      <div>
+        <div>
+          <UserInfo
+            username={username}
+            password={password}
+            email={email}
+            birthday={birthday}
+          />
+        </div>
+        <div>
+          <UpdateUser onUserUpdate={(user) => this.onUserUpdate(user)} />
+        </div>
+        <div>
+          {/* {favoriteMovies.map((m) => ( */}
+
+          <FavMovies movies={movies} favoriteMovies={favoriteMovies} />
+
+          {/* ))} */}
+        </div>
+      </div>
     );
   }
 }
+/*movies.map((m) => (<Col key={m._id}>
+                  <MovieCard movie={m} />
+                </Col>*/

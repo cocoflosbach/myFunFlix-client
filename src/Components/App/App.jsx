@@ -101,16 +101,16 @@ class App extends React.Component {
       <Router>
         <NavigationBar />
 
-        <Row className="App justify-content-md-center">
+        <div className="App justify-content-md-center">
           <Route
             exact
             path="/"
             render={() => {
               if (!user)
                 return (
-                  <Col className="login-view">
+                  <div className="login-view">
                     <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />
-                  </Col>
+                  </div>
                 );
               if (movies.length === 0) return <div className="App" />;
               return (
@@ -118,9 +118,9 @@ class App extends React.Component {
                 /*movies.map((m) => (<Col key={m._id}>
                   <MovieCard movie={m} />
                 </Col>*/
-                <Col>
+                <div>
                   <MovieList movies={movies} />
-                </Col>
+                </div>
               );
             }}
           />
@@ -141,12 +141,12 @@ class App extends React.Component {
                   <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />
                 );
               return (
-                <Col md={8}>
+                <div>
                   <MovieView
                     movie={movies.find((m) => m._id === match.params.movieId)}
                     onBackClick={() => history.goBack()}
                   />
-                </Col>
+                </div>
               );
             }}
           />
@@ -160,7 +160,7 @@ class App extends React.Component {
                 );
               if (movies.length === 0) return <div className="App" />;
               return (
-                <Col md={8}>
+                <div>
                   <GenreView
                     genre={
                       movies.find((m) => m.Genre.Name === match.params.name)
@@ -168,7 +168,7 @@ class App extends React.Component {
                     }
                     onBackClick={() => history.goBack()}
                   />
-                </Col>
+                </div>
               );
             }}
           />
@@ -181,7 +181,7 @@ class App extends React.Component {
                 );
               if (movies.length === 0) return <div className="App" />;
               return (
-                <Col md={8}>
+                <div>
                   <DirectorView
                     director={
                       movies.find((m) => m.Director.Name === match.params.name)
@@ -189,7 +189,7 @@ class App extends React.Component {
                     }
                     onBackClick={() => history.goBack()}
                   />
-                </Col>
+                </div>
               );
             }}
           />
@@ -203,17 +203,18 @@ class App extends React.Component {
                 );
               if (movies.length === 0) return <div className="App" />;
               return (
-                <Col md={8}>
+                <div>
                   <Profile
+                    favoriteMovies={favoriteMovies}
                     history={history}
                     movies={movies}
                     onBackClick={() => history.goBack()}
                   />
-                </Col>
+                </div>
               );
             }}
           />
-        </Row>
+        </div>
       </Router>
     );
   }
