@@ -35,6 +35,7 @@ class App extends React.Component {
       selectedMovie: null,
       user: null,
       username: null,
+      favoriteMovies: [],
     };
   }
 
@@ -81,6 +82,29 @@ class App extends React.Component {
     });
   }
 
+  /* addFavoriteMovie() {
+    const token = localStorage.getItem("token");
+    const username = localStorage.getItem("username");
+
+    axios
+      .post(
+        `https://my-flix-2406.herokuapp.com/users/${username}/movies/${movie._id}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      )
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          favoriteMovies: response.data,
+        });
+        alert(`Added to Favorites`);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  } */
+
   /* onUserUpdate(authData) {
       console.log(authData);
       this.setState({
@@ -95,7 +119,8 @@ class App extends React.Component {
   render() {
     // SetMovies Redux step 7: movies is extracted from this.props rather than this.state
     const { movies } = this.props;
-    const { user } = this.state;
+    const { user, favoriteMovies } = this.state;
+    const movieID = movies.find((movie) => movie._id === movies.id);
 
     return (
       <Router>
@@ -143,6 +168,8 @@ class App extends React.Component {
               return (
                 <div>
                   <MovieView
+                    movies={movies}
+                    movieID={movieID}
                     movie={movies.find((m) => m._id === match.params.movieId)}
                     onBackClick={() => history.goBack()}
                   />
