@@ -23445,7 +23445,7 @@ MovieView.propTypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"6ZKzY","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4XWfF","prop-types":"1tgq3","axios":"iYoWk","react-router-dom":"cpyQW","./MovieView.scss":"dyiOu","tailwindcss/tailwind.css":"5XEMr","@headlessui/react":"fSjYq","../navigation-bar/navigation-bar":"fPCLX"}],"1tgq3":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"6ZKzY","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4XWfF","prop-types":"1tgq3","axios":"iYoWk","react-router-dom":"cpyQW","./MovieView.scss":"dyiOu","@headlessui/react":"fSjYq","../navigation-bar/navigation-bar":"fPCLX","tailwindcss/tailwind.css":"5XEMr"}],"1tgq3":[function(require,module,exports) {
 var ReactIs = require('react-is');
 // By explicitly using `prop-types` you are opting into new development behavior.
 // http://fb.me/prop-types-in-prod
@@ -28035,7 +28035,7 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 }
 module.exports = hoistNonReactStatics;
 
-},{"react-is":"5wFcP"}],"dyiOu":[function() {},{}],"5XEMr":[function() {},{}],"fSjYq":[function(require,module,exports) {
+},{"react-is":"5wFcP"}],"dyiOu":[function() {},{}],"fSjYq":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Portal", ()=>_portalEsmJs.Portal
@@ -39435,7 +39435,7 @@ function ZoomOutIcon(props) {
 }
 exports.default = ZoomOutIcon;
 
-},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"6ZKzY"}],"5XEMr":[function() {},{}],"eoPT1":[function(require,module,exports) {
+},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"6ZKzY"}],"5XEMr":[function() {},{}],"5XEMr":[function() {},{}],"eoPT1":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$78c2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -53330,18 +53330,13 @@ parcelHelpers.export(exports, "SET_MOVIES", ()=>SET_MOVIES
 );
 parcelHelpers.export(exports, "SET_FILTER", ()=>SET_FILTER
 );
-parcelHelpers.export(exports, "SET_FAVORITEMOVIES", ()=>SET_FAVORITEMOVIES
-);
 // Action creators
 parcelHelpers.export(exports, "setMovies", ()=>setMovies
 );
 parcelHelpers.export(exports, "setFilter", ()=>setFilter
 );
-parcelHelpers.export(exports, "setFavoriteMovie", ()=>setFavoriteMovie
-);
 const SET_MOVIES = "SET_MOVIES";
 const SET_FILTER = "SET_FILTER";
-const SET_FAVORITEMOVIES = "SET_FAVORITEMOVIES";
 function setMovies(value) {
     return {
         type: SET_MOVIES,
@@ -53351,12 +53346,6 @@ function setMovies(value) {
 function setFilter(value) {
     return {
         type: SET_FILTER,
-        value
-    };
-}
-function setFavoriteMovie(value) {
-    return {
-        type: SET_FAVORITEMOVIES,
         value
     };
 }
@@ -54108,7 +54097,7 @@ class Profile extends _react.Component {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","axios":"iYoWk","react":"6TuXu","./FavMovies":"hnqqv","./UpdateUser":"kAwxd","./UserInfo":"it2Sd","@parcel/transformer-js/src/esmodule-helpers.js":"6ZKzY","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4XWfF","../Movie-Card/MovieCard":"8R1hj","tailwindcss/tailwind.css":"5XEMr","react-router-dom":"cpyQW"}],"hnqqv":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","axios":"iYoWk","react":"6TuXu","./FavMovies":"hnqqv","./UpdateUser":"kAwxd","./UserInfo":"it2Sd","@parcel/transformer-js/src/esmodule-helpers.js":"6ZKzY","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4XWfF","react-router-dom":"cpyQW","tailwindcss/tailwind.css":"5XEMr","../Movie-Card/MovieCard":"8R1hj"}],"hnqqv":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$554b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -55266,18 +55255,9 @@ function movies(state = [], action) {
             return state;
     }
 }
-function favoriteMovies(state = [], action) {
-    switch(action.type){
-        case _actions.SET_FAVORITEMOVIES:
-            return action.value;
-        default:
-            return state;
-    }
-}
 const moviesApp = _redux.combineReducers({
     visibilityFilter,
-    movies,
-    favoriteMovies
+    movies
 });
 exports.default = moviesApp;
 

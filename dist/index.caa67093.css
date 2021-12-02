@@ -54,7 +54,24 @@
 
 @tailwind utilities;
 
+.Moviecard {
+  margin-bottom: 15px;
+}
+.Moviecard .cards {
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: auto;
+}
+.Moviecard .Button {
+  margin: auto;
+  align-self: center;
+}
 
+.card-body {
+  margin-bottom: 15px;
+}
 .App {
   margin-top: 90px;
 }
