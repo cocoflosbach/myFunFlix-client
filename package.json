@@ -16,6 +16,8 @@
   },
   "homepage": "https://github.com/Cocoflosbach/myFunFlix-client#readme",
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^1.0.5",
     "axios": "^0.24.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
@@ -27,6 +29,9 @@
     "redux-devtools-extension": "^2.13.9"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-rc.0"
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^2.2.19"
   }
 }
