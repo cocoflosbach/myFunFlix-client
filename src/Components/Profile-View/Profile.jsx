@@ -6,8 +6,8 @@ import UserInfo from "./UserInfo";
 import { Link } from "react-router-dom";
 
 import "tailwindcss/tailwind.css";
-import { MovieCard } from "../Movie-Card/MovieCard";
-import { MovieView } from "../Movie-View/MovieView";
+/* import { MovieCard } from "../Movie-Card/MovieCard";
+import { MovieView } from "../Movie-View/MovieView"; */
 
 export class Profile extends Component {
   constructor(props) {
@@ -27,11 +27,13 @@ export class Profile extends Component {
       this.setState({
         user: localStorage.getItem("user"),
       });
+      this.getUser(accessToken);
     }
   }
 
   getUser(token) {
     const username = localStorage.getItem("user");
+
     axios
       .get(`https://my-flix-2406.herokuapp.com/users/${username}`, {
         headers: { Authorization: `Bearer ${token}` },
@@ -44,6 +46,8 @@ export class Profile extends Component {
           email: response.data.Email,
           birthday: response.data.Birthday,
           favoriteMovies: response.data.FavoriteMovies,
+        }).catch((e) => {
+          console.log(error);
         });
       });
   }
@@ -63,7 +67,7 @@ export class Profile extends Component {
       });
   } */
 
-  onUserUpdate(authData) {
+  /* onUserUpdate(authData) {
     console.log(authData);
     this.setState({
       user: authData.user.Username,
@@ -71,7 +75,7 @@ export class Profile extends Component {
     localStorage.setItem("token", authData.token);
     localStorage.setItem("user", authData.user.Username);
     this.getUser(authData.token);
-  }
+  } */
 
   handleDeleteUser() {
     const token = localStorage.getItem("token");
@@ -119,10 +123,9 @@ export class Profile extends Component {
               Your Favorite Movies
             </h2>
           </div>
-
           <div>
             {favoriteMovies.map((movie) => (
-              <div key={movie._id} className="group relative ">
+              <div key={movie.id} className="group relative ">
                 <FavMovies movies={movies} favoriteMovies={favoriteMovies} />
               </div>
             ))}

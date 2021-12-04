@@ -3,6 +3,8 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { HeartIcon } from "@heroicons/react/outline";
+import { HeartIcon } from "@heroicons/react/solid";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
 
 /* import { Container, Button, Row, Col, Card } from "react-bootstrap"; */
@@ -55,7 +57,7 @@ export class MovieView extends Component {
 
     return (
       <div className="bg-white ">
-        <div className=" max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className=" max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6  lg:px-8">
           <div>
             <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-screen lg:aspect-none">
               <img
@@ -116,14 +118,28 @@ export class MovieView extends Component {
               <button
                 variant="warning"
                 className="mt-4 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
-                value={movie._id}
+                key={movie._id}
                 onClick={() => {
                   this.addFavoriteMovie(movie);
                 }}
               >
+                <HeartIcon className="block h-6 w-6" />
                 Add to Favorites
               </button>
             </div>
+            {/* <div>
+              <button
+                variant="warning"
+                className="mt-4 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                key={movie._id}
+                onClick={() => {
+                  this.removeFavoriteMovie(movie);
+                }}
+              >
+                <HeartIcon className="block h-6 w-6" />
+                Remove from Favorites
+              </button>
+            </div> */}
           </div>
         </div>
       </div>

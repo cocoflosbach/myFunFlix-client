@@ -103,7 +103,7 @@ class App extends React.Component {
       <Router>
         <NavigationBar />
 
-        <div className="App justify-content-md-center">
+        <div>
           <Route
             exact
             path="/"
@@ -209,7 +209,6 @@ class App extends React.Component {
               return (
                 <div>
                   <Profile
-                    favoriteMovies={favoriteMovies}
                     history={history}
                     movies={movies}
                     onBackClick={() => history.goBack()}

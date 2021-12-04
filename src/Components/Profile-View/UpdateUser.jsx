@@ -23,7 +23,7 @@ function UpdateUser(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const username = this.props.username;
+    const username = localStorage.getItem("user");
     const token = localStorage.getItem("token");
     /* console.log(username, password, email); */
     axios

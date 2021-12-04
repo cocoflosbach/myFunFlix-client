@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { MenuIcon } from "@heroicons/react/outline";
 import "tailwindcss/tailwind.css";
 
 /* import { Navbar, NavDropdown, Nav, Container } from "react-bootstrap"; */
@@ -20,11 +20,8 @@ export class NavigationBar extends React.Component {
     const { user } = this.props;
     const movies = `/`;
     const profile = `/users/${user}`;
-    const navigation = [
-      { name: "Movies", href: `/`, current: true },
-      { name: "Profile", href: `/users/${user}`, current: true },
-      { name: "Logout", href: `/`, current: true },
-    ];
+    const logout = `/`;
+
     /* const classNames = (...classes) => {
       return classes.filter(Boolean).join(" ");
     };
@@ -53,11 +50,9 @@ export class NavigationBar extends React.Component {
                     <div>
                       <Menu.Button className="bg-white flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-800 focus:ring-white">
                         <span className="sr-only">Open user menu</span>
-                        <img
-                          className="h-12 w-25 rounded-full"
-                          src="https://i.imgur.com/uiZd9KH.png"
-                          crossOrigin="https://imgur.com"
-                          alt=""
+                        <MenuIcon
+                          className="block h-6 w-6"
+                          aria-hidden="true"
                         />
                       </Menu.Button>
                     </div>
@@ -70,12 +65,12 @@ export class NavigationBar extends React.Component {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Items className="origin-top-right relative right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
                           {({ active }) => (
                             <a
                               as={Link}
-                              key={navigation.name}
+                              key={movies}
                               href={profile}
                               className={
                                 (active ? "bg-gray-100" : "",
@@ -90,8 +85,8 @@ export class NavigationBar extends React.Component {
                           {({ active }) => (
                             <a
                               as={Link}
-                              key={navigation.name}
-                              href={movies}
+                              key={profile}
+                              href={`/users/${user}`}
                               className={
                                 (active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700")
@@ -105,7 +100,7 @@ export class NavigationBar extends React.Component {
                           {({ active }) => (
                             <a
                               href={"/"}
-                              key={navigation.name}
+                              key={logout}
                               onClick={this.onLoggedOut}
                               className={
                                 (active ? "bg-gray-100" : "",

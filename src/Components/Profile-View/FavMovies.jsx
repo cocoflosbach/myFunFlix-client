@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "tailwindcss/tailwind.css";
 import { Link } from "react-router-dom";
-import { MovieView } from "../Movie-View/MovieView";
 
 class FavMovies extends Component {
   render() {
@@ -14,7 +13,7 @@ class FavMovies extends Component {
               <img
                 crossOrigin="https://imgur.com"
                 variant="top"
-                src={favoriteMovies.ImagePath}
+                src={movies.ImagePath}
                 className="w-full h-full object-center object-cover lg:w-full lg:h-full"
               />
             </div>
@@ -22,7 +21,7 @@ class FavMovies extends Component {
               <div>
                 <h3 className="text-lg justify-center font-extrabold text-black">
                   <span aria-hidden="true" className="absolute inset-0" />
-                  {favoriteMovies.Title}
+                  {movies.Title}
                 </h3>
                 {/* <p className="mt-1 text-sm text-gray-500">{product.color}</p> */}
               </div>
