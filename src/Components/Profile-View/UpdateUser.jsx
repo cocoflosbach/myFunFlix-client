@@ -27,11 +27,16 @@ function UpdateUser(props) {
     const token = localStorage.getItem("token");
     /* console.log(username, password, email); */
     axios
-      .put(`https://my-flix-2406.herokuapp.com/users/${username}`, {
-        headers: { Authorization: `Bearer ${token}` },
-        Password: password,
-        Email: email,
-      })
+      .put(
+        `https://my-flix-2406.herokuapp.com/users/${username}`,
+        {
+          Password: password,
+          Email: email,
+        },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      )
       .then((response) => {
         const password = response.data.Password;
         const email = response.data.Email;

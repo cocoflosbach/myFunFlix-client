@@ -21,6 +21,7 @@ export class MovieView extends Component {
     axios
       .post(
         `https://my-flix-2406.herokuapp.com/users/${username}/movies/${this.props.movie._id}`,
+        null,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
