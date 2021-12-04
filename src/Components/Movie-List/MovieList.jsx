@@ -26,7 +26,7 @@ function MovieList(props) {
       <div className="bg-white ">
         <div className=" grid grid-cols-1 gap-y-5 gap-x-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-x-8 ">
           {filteredMovies.map((movie) => (
-            <div key={movie.id} className="group relative ">
+            <div key={movie._id} className="group relative ">
               <MovieCard movie={movie} movies={movies} />
             </div>
           ))}

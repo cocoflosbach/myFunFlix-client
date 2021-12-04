@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { HeartIcon } from "@heroicons/react/outline";
 import { HeartIcon } from "@heroicons/react/solid";
+import FavButton from "../Favorite-List/FavButton";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
 
 /* import { Container, Button, Row, Col, Card } from "react-bootstrap"; */
@@ -15,7 +16,7 @@ import "tailwindcss/tailwind.css";
 export class MovieView extends Component {
   addFavoriteMovie(props) {
     const token = localStorage.getItem("token");
-    const username = localStorage.getItem("username");
+    const username = localStorage.getItem("user");
 
     axios
       .post(
