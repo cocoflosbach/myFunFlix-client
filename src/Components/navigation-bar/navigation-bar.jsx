@@ -17,9 +17,9 @@ export class NavigationBar extends React.Component {
   };
 
   render() {
-    const { user } = this.props;
+    const username = localStorage.getItem("user");
     const movies = `/`;
-    const profile = `/users/${user}`;
+    const profile = `/users/${username}`;
     const logout = `/`;
 
     /* const classNames = (...classes) => {
@@ -70,7 +70,7 @@ export class NavigationBar extends React.Component {
                           {({ active }) => (
                             <a
                               as={Link}
-                              key={movies}
+                              key={profile}
                               href={profile}
                               className={
                                 (active ? "bg-gray-100" : "",
@@ -85,8 +85,8 @@ export class NavigationBar extends React.Component {
                           {({ active }) => (
                             <a
                               as={Link}
-                              key={profile}
-                              href={`/users/${user}`}
+                              key={movies}
+                              href={`/`}
                               className={
                                 (active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700")

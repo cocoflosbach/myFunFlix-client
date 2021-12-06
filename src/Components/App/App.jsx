@@ -211,6 +211,7 @@ class App extends React.Component {
                   <Profile
                     history={history}
                     movies={movies}
+                    movie={movies.find((m) => m._id === match.params.movieId)}
                     onBackClick={() => history.goBack()}
                   />
                 </div>

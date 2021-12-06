@@ -3,8 +3,17 @@ import "tailwindcss/tailwind.css";
 import { Link } from "react-router-dom";
 
 class FavMovies extends Component {
+  movie(movieId) {
+    return this.props.favoriteMovies.find((m) => m._id === movieId);
+  }
+
   render() {
     const { movies, favoriteMovies } = this.props;
+    /* const movie = favoriteMovies.find((m) => m._id === movieId);
+    const favoriteMovieId = favoriteMovies.find(movie); */
+
+    /* const movie = favoriteMovies.find((m) => m.id === favoriteMovies._id); */
+
     return (
       <div className="bg-white ">
         <div className=" max-w-2xl  mx-auto py-16 px-4 sm:py-6 sm:px-3 lg:max-w-7xl lg:px-8">
@@ -13,7 +22,7 @@ class FavMovies extends Component {
               <img
                 crossOrigin="https://imgur.com"
                 variant="top"
-                src={movies.ImagePath}
+                src={favoriteMovies.ImagePath}
                 className="w-full h-full object-center object-cover lg:w-full lg:h-full"
               />
             </div>
@@ -21,14 +30,15 @@ class FavMovies extends Component {
               <div>
                 <h3 className="text-lg justify-center font-extrabold text-black">
                   <span aria-hidden="true" className="absolute inset-0" />
-                  {movies.Title}
+                  {favoriteMovies.Title}
                 </h3>
                 {/* <p className="mt-1 text-sm text-gray-500">{product.color}</p> */}
               </div>
               {/* <p className="text-sm font-medium text-gray-900">{product.price}</p> */}
             </div>
             <div>
-              <Link to={`/movies/${movies._id}`}>
+              <Link //to={`/movies/${movies._id}`}
+              >
                 <button
                   type="submit"
                   className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"

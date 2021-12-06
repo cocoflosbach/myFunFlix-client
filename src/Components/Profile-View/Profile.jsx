@@ -33,7 +33,6 @@ export class Profile extends Component {
 
   getUser(token) {
     const username = localStorage.getItem("user");
-
     axios
       .get(`https://my-flix-2406.herokuapp.com/users/${username}`, {
         headers: { Authorization: `Bearer ${token}` },
@@ -81,13 +80,14 @@ export class Profile extends Component {
     const token = localStorage.getItem("token");
     const user = localStorage.getItem("user");
     axios
-      .get(`https://my-flix-2406.herokuapp.com/users/${username}`, {
+      .delete(`https://my-flix-2406.herokuapp.com/users/${username}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {
+        console.log(response);
+        alert("Your account has been deleted");
         localStorage.removeItem("token");
         localStorage.removeItem("user");
-        alert("Your account has been deleted");
         window.open(`/`, "self");
       })
       .catch((e) => {
@@ -126,11 +126,18 @@ export class Profile extends Component {
           <div>
             {favoriteMovies.map((movie) => (
               <div key={movie.id} className="group relative ">
-                <FavMovies movies={movies} favoriteMovies={favoriteMovies} />
+                <FavMovies movie={movie} favoriteMovies={favoriteMovies} />
               </div>
             ))}
           </div>
         </div>
+
+        {/* <div>
+          <button
+            onClick={this.handleDeleteUser()}
+            className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+          </button>
+        </div> */}
         {/* <div className=" grid grid-cols-1 gap-y-5 gap-x-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-x-8 ">
           {filteredMovies.map((movie) => (
             <div key={movie.id} className="group relative ">
