@@ -6,8 +6,6 @@ import UserInfo from "./UserInfo";
 import { Link } from "react-router-dom";
 
 import "tailwindcss/tailwind.css";
-/* import { MovieCard } from "../Movie-Card/MovieCard";
-import { MovieView } from "../Movie-View/MovieView"; */
 
 export class Profile extends Component {
   constructor(props) {
@@ -66,16 +64,6 @@ export class Profile extends Component {
       });
   } */
 
-  /* onUserUpdate(authData) {
-    console.log(authData);
-    this.setState({
-      user: authData.user.Username,
-    });
-    localStorage.setItem("token", authData.token);
-    localStorage.setItem("user", authData.user.Username);
-    this.getUser(authData.token);
-  } */
-
   handleDeleteUser() {
     const token = localStorage.getItem("token");
     const user = localStorage.getItem("user");
@@ -95,10 +83,6 @@ export class Profile extends Component {
       });
   }
 
-  /* movie(movieId) {
-    return this.props.favoriteMovies.find((m) => m._id === movieId);
-  }
- */
   render() {
     const { username, password, email, birthday, favoriteMovies } = this.state;
     const { movies, user } = this.props;
@@ -107,8 +91,6 @@ export class Profile extends Component {
     });
 
     const movie = FavoriteMovieList.find((m) => m._id);
-
-    /* movie={movies.find((m) => m._id === match.params.movieId)} */
 
     return (
       <div>
@@ -160,6 +142,3 @@ export class Profile extends Component {
     );
   }
 }
-/*movies.map((m) => (<Col key={m._id}>
-                  <MovieCard movie={m} />
-                </Col>*/

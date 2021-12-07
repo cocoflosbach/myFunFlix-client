@@ -1,19 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { propTypes } from "react-bootstrap/esm/Image";
-/* import {
-  Form,
-  Button,
-  Row,
-  Col,
-  Figure,
-  Card,
-  CardGroup,
-  Container,
-  ListGroup,
-  ListGroupItem,
-  CardDeck,
-} from "react-bootstrap"; */
+
 import "tailwindcss/tailwind.css";
 
 function UpdateUser(props) {
@@ -25,7 +13,7 @@ function UpdateUser(props) {
     e.preventDefault();
     const username = localStorage.getItem("user");
     const token = localStorage.getItem("token");
-    /* console.log(username, password, email); */
+
     axios
       .put(
         `https://my-flix-2406.herokuapp.com/users/${username}`,
@@ -41,8 +29,6 @@ function UpdateUser(props) {
         const password = response.data.Password;
         const email = response.data.Email;
         console.log(password, email);
-        /* setPassword({ password });
-        setEmail({ email }); */
         window.open("/", "_self"); //Second argument is neccessary so that the page will open in the current tab
         alert("Your profile has been updated");
         props.onUserUpdate(authData);
@@ -125,53 +111,6 @@ function UpdateUser(props) {
         </form>
       </div>
     </div>
-
-    /*  <Container className="update-user">
-      <Row className="justify-content-md-center">
-        <Col md={8}>
-          <CardGroup>
-            <Card border="warning" style={{ width: "18rem" }}>
-              <Card.Body>
-                <Card.Title>Update User Information</Card.Title>
-                <Form>
-                  <Form.Group controlId="formUsername">
-                    <Form.Label>Username:</Form.Label>
-                    <Form.Control
-                      type="text"
-                      onChange={(e) => setUsername(e.target.value)}
-                      disabled
-                    />
-                  </Form.Group>
-                  <Form.Group controlId="formPassword">
-                    <Form.Label>Password:</Form.Label>
-                    <Form.Control
-                      type="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                  </Form.Group>
-                  <Form.Group controlId="formemail">
-                    <Form.Label>Email:</Form.Label>
-                    <Form.Control
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </Form.Group>
-                  <Button
-                    variant="warning"
-                    type="submit"
-                    onClick={handleSubmit}
-                  >
-                    Update
-                  </Button>
-                </Form>
-              </Card.Body>
-            </Card>
-          </CardGroup>
-        </Col>
-      </Row>
-    </Container> */
   );
 }
 

@@ -28,56 +28,6 @@ export function LoginView(props) {
   };
 
   return (
-    /* <Row>
-      <Col></Col>
-      <Col sm={8}>
-        <CardGroup>
-          <Card>
-            <Card.Body>
-              <Form className="Login" noValidate>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Username</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    required
-                  />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                  />
-                </Form.Group>
-                <Button variant="warning" type="submit" onClick={handleSubmit}>
-                  Login
-                </Button>
-                <br />
-                <br />
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                  <Form.Label> New User? </Form.Label> {}
-                  <br />
-                  <Link to={`/register`}>
-                    <Button variant="warning" type="submit">
-                      Register Here
-                    </Button>
-                  </Link>
-                </Form.Group>
-              </Form>
-            </Card.Body>
-          </Card>
-        </CardGroup>
-      </Col>
-      <Col></Col>
-    </Row> */
-
     <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
@@ -158,4 +108,3 @@ export function LoginView(props) {
     </div>
   );
 }
-/* mt-6 text-center text-3xl font-extrabold text-gray-900 */

@@ -22838,16 +22838,7 @@ var _tailwindCss = require("tailwindcss/tailwind.css");
             user: null
         });
     }
-    /* onUserUpdate(authData) {
-      console.log(authData);
-      this.setState({
-          password:,
-          email:
-      });
-      localStorage.setItem("token", authData.token);
-      localStorage.setItem("user", authData.token);
-      this.updateUser(authData.token);
-  } */ render() {
+    render() {
         // SetMovies Redux step 7: movies is extracted from this.props rather than this.state
         const { movies  } = this.props;
         const { user: user1 , favoriteMovies  } = this.state;
@@ -22856,7 +22847,7 @@ var _tailwindCss = require("tailwindcss/tailwind.css");
         return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "src/Components/App/App.jsx",
-                lineNumber: 103,
+                lineNumber: 92,
                 columnNumber: 7
             },
             __self: this,
@@ -22864,7 +22855,7 @@ var _tailwindCss = require("tailwindcss/tailwind.css");
                 /*#__PURE__*/ _jsxRuntime.jsx(_navigationBar.NavigationBar, {
                     __source: {
                         fileName: "src/Components/App/App.jsx",
-                        lineNumber: 104,
+                        lineNumber: 93,
                         columnNumber: 9
                     },
                     __self: this
@@ -22872,7 +22863,7 @@ var _tailwindCss = require("tailwindcss/tailwind.css");
                 /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                     __source: {
                         fileName: "src/Components/App/App.jsx",
-                        lineNumber: 106,
+                        lineNumber: 95,
                         columnNumber: 9
                     },
                     __self: this,
@@ -22901,7 +22892,7 @@ var _tailwindCss = require("tailwindcss/tailwind.css");
                             },
                             __source: {
                                 fileName: "src/Components/App/App.jsx",
-                                lineNumber: 107,
+                                lineNumber: 96,
                                 columnNumber: 11
                             },
                             __self: this
@@ -22917,7 +22908,7 @@ var _tailwindCss = require("tailwindcss/tailwind.css");
                             },
                             __source: {
                                 fileName: "src/Components/App/App.jsx",
-                                lineNumber: 130,
+                                lineNumber: 119,
                                 columnNumber: 11
                             },
                             __self: this
@@ -22940,7 +22931,7 @@ var _tailwindCss = require("tailwindcss/tailwind.css");
                             },
                             __source: {
                                 fileName: "src/Components/App/App.jsx",
-                                lineNumber: 138,
+                                lineNumber: 127,
                                 columnNumber: 11
                             },
                             __self: this
@@ -22964,7 +22955,7 @@ var _tailwindCss = require("tailwindcss/tailwind.css");
                             },
                             __source: {
                                 fileName: "src/Components/App/App.jsx",
-                                lineNumber: 158,
+                                lineNumber: 147,
                                 columnNumber: 11
                             },
                             __self: this
@@ -22988,7 +22979,7 @@ var _tailwindCss = require("tailwindcss/tailwind.css");
                             },
                             __source: {
                                 fileName: "src/Components/App/App.jsx",
-                                lineNumber: 179,
+                                lineNumber: 168,
                                 columnNumber: 11
                             },
                             __self: this
@@ -23014,7 +23005,7 @@ var _tailwindCss = require("tailwindcss/tailwind.css");
                             },
                             __source: {
                                 fileName: "src/Components/App/App.jsx",
-                                lineNumber: 201,
+                                lineNumber: 190,
                                 columnNumber: 11
                             },
                             __self: this
@@ -29397,7 +29388,6 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _reactBootstrap = require("react-bootstrap");
 var _reactRouterDom = require("react-router-dom");
 var _movieCardScss = require("./MovieCard.scss");
 var _tailwindCss = require("tailwindcss/tailwind.css");
@@ -29408,7 +29398,7 @@ class MovieCard extends _react.Component {
             className: "bg-white ",
             __source: {
                 fileName: "src/Components/Movie-Card/MovieCard.jsx",
-                lineNumber: 13,
+                lineNumber: 11,
                 columnNumber: 7
             },
             __self: this,
@@ -29416,14 +29406,14 @@ class MovieCard extends _react.Component {
                 className: " max-w-2xl mx-auto py-16 px-4 sm:py-6 sm:px-3 lg:max-w-7xl lg:px-8",
                 __source: {
                     fileName: "src/Components/Movie-Card/MovieCard.jsx",
-                    lineNumber: 14,
+                    lineNumber: 12,
                     columnNumber: 9
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                     __source: {
                         fileName: "src/Components/Movie-Card/MovieCard.jsx",
-                        lineNumber: 15,
+                        lineNumber: 13,
                         columnNumber: 11
                     },
                     __self: this,
@@ -29432,21 +29422,31 @@ class MovieCard extends _react.Component {
                             className: "w-full h-80 bg-gray-200 aspect-w-1 aspect-h-1 shadow-md rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none",
                             __source: {
                                 fileName: "src/Components/Movie-Card/MovieCard.jsx",
-                                lineNumber: 16,
+                                lineNumber: 14,
                                 columnNumber: 13
                             },
                             __self: this,
-                            children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
-                                crossOrigin: "https://imgur.com",
-                                variant: "top",
-                                src: movie.ImagePath,
-                                className: "w-full h-full object-center object-cover lg:w-full lg:h-full",
+                            children: /*#__PURE__*/ _jsxRuntime.jsx("a", {
+                                as: _reactRouterDom.Link,
+                                href: `/movies/${movie._id}`,
                                 __source: {
                                     fileName: "src/Components/Movie-Card/MovieCard.jsx",
-                                    lineNumber: 17,
+                                    lineNumber: 15,
                                     columnNumber: 15
                                 },
-                                __self: this
+                                __self: this,
+                                children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
+                                    crossOrigin: "https://imgur.com",
+                                    variant: "top",
+                                    src: movie.ImagePath,
+                                    className: "w-full h-full object-center object-cover lg:w-full lg:h-full",
+                                    __source: {
+                                        fileName: "src/Components/Movie-Card/MovieCard.jsx",
+                                        lineNumber: 16,
+                                        columnNumber: 17
+                                    },
+                                    __self: this
+                                })
                             })
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsx("div", {
@@ -29475,7 +29475,7 @@ class MovieCard extends _react.Component {
                                     children: [
                                         /*#__PURE__*/ _jsxRuntime.jsx("span", {
                                             "aria-hidden": "true",
-                                            className: "absolute inset-0",
+                                            className: "relative inset-0",
                                             __source: {
                                                 fileName: "src/Components/Movie-Card/MovieCard.jsx",
                                                 lineNumber: 27,
@@ -29491,7 +29491,7 @@ class MovieCard extends _react.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx("div", {
                             __source: {
                                 fileName: "src/Components/Movie-Card/MovieCard.jsx",
-                                lineNumber: 34,
+                                lineNumber: 32,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -29499,7 +29499,7 @@ class MovieCard extends _react.Component {
                                 to: `/movies/${movie._id}`,
                                 __source: {
                                     fileName: "src/Components/Movie-Card/MovieCard.jsx",
-                                    lineNumber: 35,
+                                    lineNumber: 33,
                                     columnNumber: 15
                                 },
                                 __self: this,
@@ -29509,7 +29509,7 @@ class MovieCard extends _react.Component {
                                     type: "submit",
                                     __source: {
                                         fileName: "src/Components/Movie-Card/MovieCard.jsx",
-                                        lineNumber: 36,
+                                        lineNumber: 34,
                                         columnNumber: 17
                                     },
                                     __self: this,
@@ -29535,7 +29535,992 @@ MovieCard.propTypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"6Ds2u","react":"4mchR","prop-types":"2bysO","react-bootstrap":"9qMdX","react-router-dom":"etVME","./MovieCard.scss":"11VDq","tailwindcss/tailwind.css":"bZa40","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"9qMdX":[function(require,module,exports) {
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","prop-types":"2bysO","react-router-dom":"etVME","./MovieCard.scss":"11VDq","tailwindcss/tailwind.css":"bZa40","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"11VDq":[function() {},{}],"bZa40":[function() {},{}],"9pz13":[function(require,module,exports) {
+"use strict";
+var Refresh = require('react-refresh/runtime');
+function debounce(func, delay) {
+    var args1;
+    var timeout = undefined;
+    return function(args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = undefined;
+            func.call(null, args);
+        }, delay);
+    };
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30); // Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module.id + ' ' + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module) {
+    if (isReactRefreshBoundary(module.exports)) {
+        registerExportsForReactRefresh(module);
+        if (module.hot) {
+            module.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module.exports;
+            });
+            module.hot.accept(function(getParents) {
+                var prevExports = module.hot.data.prevExports;
+                var nextExports = module.exports; // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+} // When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module) {
+    var exports = module.exports, id = module.id;
+    Refresh.register(exports, id + ' %exports%');
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        Refresh.register(exportValue, id + ' %exports% ' + key);
+    }
+}
+
+},{"react-refresh/runtime":"aeH4U"}],"15lqU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$804d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$804d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRedux = require("react-redux");
+var _form = require("react-bootstrap/Form");
+var _formDefault = parcelHelpers.interopDefault(_form);
+var _actions = require("../../actions/Actions");
+function VisibilityFilterInput(props) {
+    return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+        className: "mt-12 center",
+        __source: {
+            fileName: "src/Components/visibility-filter-input/visibility-filter-input.jsx",
+            lineNumber: 10,
+            columnNumber: 5
+        },
+        __self: this,
+        children: /*#__PURE__*/ _jsxRuntime.jsx("input", {
+            id: "visibility-search",
+            value: props.VisibilityFilter,
+            onChange: (e)=>props.setFilter(e.target.value)
+            ,
+            className: " mx-auto appearance-none rounded-none relative block w-10/12 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm",
+            placeholder: "Search Movies",
+            __source: {
+                fileName: "src/Components/visibility-filter-input/visibility-filter-input.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            },
+            __self: this
+        })
+    }));
+}
+_c = VisibilityFilterInput;
+exports.default = _reactRedux.connect(null, {
+    setFilter: _actions.setFilter
+})(VisibilityFilterInput); // connecting a component with an action allows you to receive the actual action as a prop
+var _c;
+$RefreshReg$(_c, "VisibilityFilterInput");
+
+  $parcel$ReactRefreshHelpers$804d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","react-redux":"lT3ms","react-bootstrap/Form":"PeiIB","../../actions/Actions":"ffAqt","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"PeiIB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _formCheck = require("./FormCheck");
+var _formCheckDefault = parcelHelpers.interopDefault(_formCheck);
+var _formControl = require("./FormControl");
+var _formControlDefault = parcelHelpers.interopDefault(_formControl);
+var _formFloating = require("./FormFloating");
+var _formFloatingDefault = parcelHelpers.interopDefault(_formFloating);
+var _formGroup = require("./FormGroup");
+var _formGroupDefault = parcelHelpers.interopDefault(_formGroup);
+var _formLabel = require("./FormLabel");
+var _formLabelDefault = parcelHelpers.interopDefault(_formLabel);
+var _formRange = require("./FormRange");
+var _formRangeDefault = parcelHelpers.interopDefault(_formRange);
+var _formSelect = require("./FormSelect");
+var _formSelectDefault = parcelHelpers.interopDefault(_formSelect);
+var _formText = require("./FormText");
+var _formTextDefault = parcelHelpers.interopDefault(_formText);
+var _switch = require("./Switch");
+var _switchDefault = parcelHelpers.interopDefault(_switch);
+var _floatingLabel = require("./FloatingLabel");
+var _floatingLabelDefault = parcelHelpers.interopDefault(_floatingLabel);
+var _jsxRuntime = require("react/jsx-runtime");
+const propTypes = {
+    /**
+   * The Form `ref` will be forwarded to the underlying element,
+   * which means, unless it's rendered `as` a composite component,
+   * it will be a DOM node, when resolved.
+   *
+   * @type {ReactRef}
+   * @alias ref
+   */ _ref: _propTypesDefault.default.any,
+    /**
+   * Mark a form as having been validated. Setting it to `true` will
+   * toggle any validation styles on the forms elements.
+   */ validated: _propTypesDefault.default.bool,
+    as: _propTypesDefault.default.elementType
+};
+const Form = /*#__PURE__*/ _react.forwardRef(({ className , validated , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = 'form' , ...props }, ref)=>/*#__PURE__*/ _jsxRuntime.jsx(Component, {
+        ...props,
+        ref: ref,
+        className: _classnamesDefault.default(className, validated && 'was-validated')
+    })
+);
+Form.displayName = 'Form';
+Form.propTypes = propTypes;
+exports.default = Object.assign(Form, {
+    Group: _formGroupDefault.default,
+    Control: _formControlDefault.default,
+    Floating: _formFloatingDefault.default,
+    Check: _formCheckDefault.default,
+    Switch: _switchDefault.default,
+    Label: _formLabelDefault.default,
+    Text: _formTextDefault.default,
+    Range: _formRangeDefault.default,
+    Select: _formSelectDefault.default,
+    FloatingLabel: _floatingLabelDefault.default
+});
+
+},{"classnames":"2cVcN","prop-types":"2bysO","react":"4mchR","./FormCheck":"k9egm","./FormControl":"3iZ43","./FormFloating":"2z0Ti","./FormGroup":"6eZW8","./FormLabel":"4E1MN","./FormRange":"g1L56","./FormSelect":"cLBuq","./FormText":"gsCyO","./Switch":"U0RUx","./FloatingLabel":"1Xz1h","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"k9egm":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _feedback = require("./Feedback");
+var _feedbackDefault = parcelHelpers.interopDefault(_feedback);
+var _formCheckInput = require("./FormCheckInput");
+var _formCheckInputDefault = parcelHelpers.interopDefault(_formCheckInput);
+var _formCheckLabel = require("./FormCheckLabel");
+var _formCheckLabelDefault = parcelHelpers.interopDefault(_formCheckLabel);
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const FormCheck = /*#__PURE__*/ _react.forwardRef(({ id , bsPrefix , bsSwitchPrefix , inline =false , disabled =false , isValid =false , isInvalid =false , feedbackTooltip =false , feedback , feedbackType , className , style , title ='' , type ='checkbox' , label , children , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as ='input' , ...props }, ref)=>{
+    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-check');
+    bsSwitchPrefix = _themeProvider.useBootstrapPrefix(bsSwitchPrefix, 'form-switch');
+    const { controlId  } = _react.useContext(_formContextDefault.default);
+    const innerFormContext = _react.useMemo(()=>({
+            controlId: id || controlId
+        })
+    , [
+        controlId,
+        id
+    ]);
+    const hasLabel = label != null && label !== false && !children;
+    const input = /*#__PURE__*/ _jsxRuntime.jsx(_formCheckInputDefault.default, {
+        ...props,
+        type: type === 'switch' ? 'checkbox' : type,
+        ref: ref,
+        isValid: isValid,
+        isInvalid: isInvalid,
+        disabled: disabled,
+        as: as
+    });
+    return(/*#__PURE__*/ _jsxRuntime.jsx(_formContextDefault.default.Provider, {
+        value: innerFormContext,
+        children: /*#__PURE__*/ _jsxRuntime.jsx("div", {
+            style: style,
+            className: _classnamesDefault.default(className, label && bsPrefix, inline && `${bsPrefix}-inline`, type === 'switch' && bsSwitchPrefix),
+            children: children || /*#__PURE__*/ _jsxRuntime.jsxs(_jsxRuntime.Fragment, {
+                children: [
+                    input,
+                    hasLabel && /*#__PURE__*/ _jsxRuntime.jsx(_formCheckLabelDefault.default, {
+                        title: title,
+                        children: label
+                    }),
+                    feedback && /*#__PURE__*/ _jsxRuntime.jsx(_feedbackDefault.default, {
+                        type: feedbackType,
+                        tooltip: feedbackTooltip,
+                        children: feedback
+                    })
+                ]
+            })
+        })
+    }));
+});
+FormCheck.displayName = 'FormCheck';
+exports.default = Object.assign(FormCheck, {
+    Input: _formCheckInputDefault.default,
+    Label: _formCheckLabelDefault.default
+});
+
+},{"classnames":"2cVcN","react":"4mchR","./Feedback":"3l6gp","./FormCheckInput":"fNTQv","./FormCheckLabel":"lyWnd","./FormContext":"axYdK","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"3l6gp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _jsxRuntime = require("react/jsx-runtime");
+const propTypes = {
+    /**
+   * Specify whether the feedback is for valid or invalid fields
+   *
+   * @type {('valid'|'invalid')}
+   */ type: _propTypesDefault.default.string,
+    /** Display feedback as a tooltip. */ tooltip: _propTypesDefault.default.bool,
+    as: _propTypesDefault.default.elementType
+};
+const Feedback = /*#__PURE__*/ _react.forwardRef(({ as: Component = 'div' , className , type ='valid' , tooltip =false , ...props }, ref)=>/*#__PURE__*/ _jsxRuntime.jsx(Component, {
+        ...props,
+        ref: ref,
+        className: _classnamesDefault.default(className, `${type}-${tooltip ? 'tooltip' : 'feedback'}`)
+    })
+);
+Feedback.displayName = 'Feedback';
+Feedback.propTypes = propTypes;
+exports.default = Feedback;
+
+},{"classnames":"2cVcN","react":"4mchR","prop-types":"2bysO","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"fNTQv":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const FormCheckInput = /*#__PURE__*/ _react.forwardRef(({ id , bsPrefix , className , type ='checkbox' , isValid =false , isInvalid =false , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = 'input' , ...props }, ref)=>{
+    const { controlId  } = _react.useContext(_formContextDefault.default);
+    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-check-input');
+    return(/*#__PURE__*/ _jsxRuntime.jsx(Component, {
+        ...props,
+        ref: ref,
+        type: type,
+        id: id || controlId,
+        className: _classnamesDefault.default(className, bsPrefix, isValid && 'is-valid', isInvalid && 'is-invalid')
+    }));
+});
+FormCheckInput.displayName = 'FormCheckInput';
+exports.default = FormCheckInput;
+
+},{"classnames":"2cVcN","react":"4mchR","./FormContext":"axYdK","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"axYdK":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react"); // TODO
+const FormContext = /*#__PURE__*/ _react.createContext({
+});
+exports.default = FormContext;
+
+},{"react":"4mchR","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"lyWnd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const FormCheckLabel = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , className , htmlFor , ...props }, ref)=>{
+    const { controlId  } = _react.useContext(_formContextDefault.default);
+    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-check-label');
+    return(/*#__PURE__*/ _jsxRuntime.jsx("label", {
+        ...props,
+        ref: ref,
+        htmlFor: htmlFor || controlId,
+        className: _classnamesDefault.default(className, bsPrefix)
+    }));
+});
+FormCheckLabel.displayName = 'FormCheckLabel';
+exports.default = FormCheckLabel;
+
+},{"classnames":"2cVcN","react":"4mchR","./FormContext":"axYdK","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"3iZ43":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _warning = require("warning");
+var _warningDefault = parcelHelpers.interopDefault(_warning);
+var _feedback = require("./Feedback");
+var _feedbackDefault = parcelHelpers.interopDefault(_feedback);
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const FormControl = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , type , size , htmlSize , id , className , isValid =false , isInvalid =false , plaintext , readOnly , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = 'input' , ...props }, ref)=>{
+    const { controlId  } = _react.useContext(_formContextDefault.default);
+    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-control');
+    let classes;
+    if (plaintext) classes = {
+        [`${bsPrefix}-plaintext`]: true
+    };
+    else classes = {
+        [bsPrefix]: true,
+        [`${bsPrefix}-${size}`]: size
+    };
+    _warningDefault.default(controlId == null || !id, '`controlId` is ignored on `<FormControl>` when `id` is specified.');
+    return(/*#__PURE__*/ _jsxRuntime.jsx(Component, {
+        ...props,
+        type: type,
+        size: htmlSize,
+        ref: ref,
+        readOnly: readOnly,
+        id: id || controlId,
+        className: _classnamesDefault.default(className, classes, isValid && `is-valid`, isInvalid && `is-invalid`, type === 'color' && `${bsPrefix}-color`)
+    }));
+});
+FormControl.displayName = 'FormControl';
+exports.default = Object.assign(FormControl, {
+    Feedback: _feedbackDefault.default
+});
+
+},{"classnames":"2cVcN","react":"4mchR","warning":"4vouU","./Feedback":"3l6gp","./FormContext":"axYdK","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"4vouU":[function(require,module,exports) {
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 'use strict';
+/**
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */ var __DEV__ = true;
+var warning = function() {
+};
+if (__DEV__) {
+    var printWarning = function printWarning(format, args) {
+        var len = arguments.length;
+        args = new Array(len > 1 ? len - 1 : 0);
+        for(var key = 1; key < len; key++)args[key - 1] = arguments[key];
+        var argIndex = 0;
+        var message = 'Warning: ' + format.replace(/%s/g, function() {
+            return args[argIndex++];
+        });
+        if (typeof console !== 'undefined') console.error(message);
+        try {
+            // --- Welcome to debugging React ---
+            // This error was thrown as a convenience so that you can use this stack
+            // to find the callsite that caused this warning to fire.
+            throw new Error(message);
+        } catch (x) {
+        }
+    };
+    warning = function(condition, format, args) {
+        var len = arguments.length;
+        args = new Array(len > 2 ? len - 2 : 0);
+        for(var key = 2; key < len; key++)args[key - 2] = arguments[key];
+        if (format === undefined) throw new Error("`warning(condition, format, ...args)` requires a warning message argument");
+        if (!condition) printWarning.apply(null, [
+            format
+        ].concat(args));
+    };
+}
+module.exports = warning;
+
+},{}],"2z0Ti":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _createWithBsPrefix = require("./createWithBsPrefix");
+var _createWithBsPrefixDefault = parcelHelpers.interopDefault(_createWithBsPrefix);
+exports.default = _createWithBsPrefixDefault.default('form-floating');
+
+},{"./createWithBsPrefix":"8IH8I","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"8IH8I":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _camelize = require("dom-helpers/camelize");
+var _camelizeDefault = parcelHelpers.interopDefault(_camelize);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const pascalCase = (str)=>str[0].toUpperCase() + _camelizeDefault.default(str).slice(1)
+;
+function createWithBsPrefix(prefix, { displayName =pascalCase(prefix) , Component , defaultProps  } = {
+}) {
+    const BsComponent = /*#__PURE__*/ _react.forwardRef(({ className , bsPrefix , as: Tag = Component || 'div' , ...props }, ref)=>{
+        const resolvedPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, prefix);
+        return(/*#__PURE__*/ _jsxRuntime.jsx(Tag, {
+            ref: ref,
+            className: _classnamesDefault.default(className, resolvedPrefix),
+            ...props
+        }));
+    });
+    BsComponent.defaultProps = defaultProps;
+    BsComponent.displayName = displayName;
+    return BsComponent;
+}
+exports.default = createWithBsPrefix;
+
+},{"classnames":"2cVcN","dom-helpers/camelize":"i1bzh","react":"4mchR","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"i1bzh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var rHyphen = /-(.)/g;
+function camelize(string) {
+    return string.replace(rHyphen, function(_, chr) {
+        return chr.toUpperCase();
+    });
+}
+exports.default = camelize;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"6eZW8":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _jsxRuntime = require("react/jsx-runtime");
+const FormGroup = /*#__PURE__*/ _react.forwardRef(({ controlId , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = 'div' , ...props }, ref)=>{
+    const context = _react.useMemo(()=>({
+            controlId
+        })
+    , [
+        controlId
+    ]);
+    return(/*#__PURE__*/ _jsxRuntime.jsx(_formContextDefault.default.Provider, {
+        value: context,
+        children: /*#__PURE__*/ _jsxRuntime.jsx(Component, {
+            ...props,
+            ref: ref
+        })
+    }));
+});
+FormGroup.displayName = 'FormGroup';
+exports.default = FormGroup;
+
+},{"react":"4mchR","./FormContext":"axYdK","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"4E1MN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _warning = require("warning");
+var _warningDefault = parcelHelpers.interopDefault(_warning);
+var _col = require("./Col");
+var _colDefault = parcelHelpers.interopDefault(_col);
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const defaultProps = {
+    column: false,
+    visuallyHidden: false
+};
+const FormLabel = /*#__PURE__*/ _react.forwardRef(({ // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = 'label' , bsPrefix , column , visuallyHidden , className , htmlFor , ...props }, ref)=>{
+    const { controlId  } = _react.useContext(_formContextDefault.default);
+    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-label');
+    let columnClass = 'col-form-label';
+    if (typeof column === 'string') columnClass = `${columnClass} ${columnClass}-${column}`;
+    const classes = _classnamesDefault.default(className, bsPrefix, visuallyHidden && 'visually-hidden', column && columnClass);
+    _warningDefault.default(controlId == null || !htmlFor, '`controlId` is ignored on `<FormLabel>` when `htmlFor` is specified.');
+    htmlFor = htmlFor || controlId;
+    if (column) return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+        ref: ref,
+        as: "label",
+        className: classes,
+        htmlFor: htmlFor,
+        ...props
+    }));
+    return(/*#__PURE__*/ // eslint-disable-next-line jsx-a11y/label-has-for, jsx-a11y/label-has-associated-control
+    _jsxRuntime.jsx(Component, {
+        ref: ref,
+        className: classes,
+        htmlFor: htmlFor,
+        ...props
+    }));
+});
+FormLabel.displayName = 'FormLabel';
+FormLabel.defaultProps = defaultProps;
+exports.default = FormLabel;
+
+},{"classnames":"2cVcN","react":"4mchR","warning":"4vouU","./Col":"kxhZp","./FormContext":"axYdK","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"g1L56":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _jsxRuntime = require("react/jsx-runtime");
+const FormRange = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , className , id , ...props }, ref)=>{
+    const { controlId  } = _react.useContext(_formContextDefault.default);
+    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-range');
+    return(/*#__PURE__*/ _jsxRuntime.jsx("input", {
+        ...props,
+        type: "range",
+        ref: ref,
+        className: _classnamesDefault.default(className, bsPrefix),
+        id: id || controlId
+    }));
+});
+FormRange.displayName = 'FormRange';
+exports.default = FormRange;
+
+},{"classnames":"2cVcN","react":"4mchR","./ThemeProvider":"oG7Uz","./FormContext":"axYdK","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"cLBuq":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _formContext = require("./FormContext");
+var _formContextDefault = parcelHelpers.interopDefault(_formContext);
+var _jsxRuntime = require("react/jsx-runtime");
+const FormSelect = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , size , htmlSize , className , isValid =false , isInvalid =false , id , ...props }, ref)=>{
+    const { controlId  } = _react.useContext(_formContextDefault.default);
+    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-select');
+    return(/*#__PURE__*/ _jsxRuntime.jsx("select", {
+        ...props,
+        size: htmlSize,
+        ref: ref,
+        className: _classnamesDefault.default(className, bsPrefix, size && `${bsPrefix}-${size}`, isValid && `is-valid`, isInvalid && `is-invalid`),
+        id: id || controlId
+    }));
+});
+FormSelect.displayName = 'FormSelect';
+exports.default = FormSelect;
+
+},{"classnames":"2cVcN","react":"4mchR","./ThemeProvider":"oG7Uz","./FormContext":"axYdK","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"gsCyO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const FormText = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , className , as: Component = 'small' , muted , ...props }, ref)=>{
+    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-text');
+    return(/*#__PURE__*/ _jsxRuntime.jsx(Component, {
+        ...props,
+        ref: ref,
+        className: _classnamesDefault.default(className, bsPrefix, muted && 'text-muted')
+    }));
+});
+FormText.displayName = 'FormText';
+exports.default = FormText;
+
+},{"classnames":"2cVcN","react":"4mchR","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"U0RUx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _formCheck = require("./FormCheck");
+var _formCheckDefault = parcelHelpers.interopDefault(_formCheck);
+var _jsxRuntime = require("react/jsx-runtime");
+const Switch = /*#__PURE__*/ _react.forwardRef((props, ref)=>/*#__PURE__*/ _jsxRuntime.jsx(_formCheckDefault.default, {
+        ...props,
+        ref: ref,
+        type: "switch"
+    })
+);
+Switch.displayName = 'Switch';
+exports.default = Object.assign(Switch, {
+    Input: _formCheckDefault.default.Input,
+    Label: _formCheckDefault.default.Label
+});
+
+},{"react":"4mchR","./FormCheck":"k9egm","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1Xz1h":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _formGroup = require("./FormGroup");
+var _formGroupDefault = parcelHelpers.interopDefault(_formGroup);
+var _themeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+const FloatingLabel = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , className , children , controlId , label , ...props }, ref)=>{
+    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-floating');
+    return(/*#__PURE__*/ _jsxRuntime.jsxs(_formGroupDefault.default, {
+        ref: ref,
+        className: _classnamesDefault.default(className, bsPrefix),
+        controlId: controlId,
+        ...props,
+        children: [
+            children,
+            /*#__PURE__*/ _jsxRuntime.jsx("label", {
+                htmlFor: controlId,
+                children: label
+            })
+        ]
+    }));
+});
+FloatingLabel.displayName = 'FloatingLabel';
+exports.default = FloatingLabel;
+
+},{"classnames":"2cVcN","react":"4mchR","./FormGroup":"6eZW8","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"c92xC":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ad70 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ad70.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "LoginView", ()=>LoginView
+);
+var _jsxRuntime = require("react/jsx-runtime");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactBootstrap = require("react-bootstrap");
+var _reactRouterDom = require("react-router-dom");
+var _tailwindCss = require("tailwindcss/tailwind.css");
+var _s = $RefreshSig$();
+function LoginView(props) {
+    _s();
+    const [username, setUsername] = _react.useState("");
+    const [password, setPassword] = _react.useState("");
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        _axiosDefault.default.post("https://my-flix-2406.herokuapp.com/login", {
+            Username: username,
+            Password: password
+        }).then((response)=>{
+            const data = response.data;
+            console.log(username, password);
+            props.onLoggedIn(data);
+        }).catch((e)=>{
+            console.log("Login details incorrect. Please check your username and password.");
+        });
+    };
+    return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+        className: "min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8",
+        __source: {
+            fileName: "src/Components/Login-View/Login.jsx",
+            lineNumber: 31,
+            columnNumber: 5
+        },
+        __self: this,
+        children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+            className: "max-w-md w-full space-y-8",
+            __source: {
+                fileName: "src/Components/Login-View/Login.jsx",
+                lineNumber: 32,
+                columnNumber: 7
+            },
+            __self: this,
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                    __source: {
+                        fileName: "src/Components/Login-View/Login.jsx",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx("img", {
+                            className: "mx-auto h-12 w-auto",
+                            crossOrigin: "https://imgur.com",
+                            src: "https://i.imgur.com/IOx97Xx.png",
+                            alt: "Workflow",
+                            __source: {
+                                fileName: "src/Components/Login-View/Login.jsx",
+                                lineNumber: 34,
+                                columnNumber: 11
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx("h2", {
+                            className: "mt-6 text-center text-3xl font-extrabold text-gray-900",
+                            __source: {
+                                fileName: "src/Components/Login-View/Login.jsx",
+                                lineNumber: 40,
+                                columnNumber: 11
+                            },
+                            __self: this,
+                            children: "Sign in to your account"
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs("form", {
+                    className: "mt-8 space-y-6",
+                    action: "#",
+                    method: "POST",
+                    __source: {
+                        fileName: "src/Components/Login-View/Login.jsx",
+                        lineNumber: 44,
+                        columnNumber: 9
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                            type: "hidden",
+                            name: "remember",
+                            defaultValue: "true",
+                            __source: {
+                                fileName: "src/Components/Login-View/Login.jsx",
+                                lineNumber: 45,
+                                columnNumber: 11
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                            className: "rounded-md shadow-sm -space-y-px",
+                            __source: {
+                                fileName: "src/Components/Login-View/Login.jsx",
+                                lineNumber: 46,
+                                columnNumber: 11
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                                    __source: {
+                                        fileName: "src/Components/Login-View/Login.jsx",
+                                        lineNumber: 47,
+                                        columnNumber: 13
+                                    },
+                                    __self: this,
+                                    children: [
+                                        /*#__PURE__*/ _jsxRuntime.jsx("label", {
+                                            htmlFor: "username",
+                                            className: "sr-only",
+                                            __source: {
+                                                fileName: "src/Components/Login-View/Login.jsx",
+                                                lineNumber: 48,
+                                                columnNumber: 15
+                                            },
+                                            __self: this,
+                                            children: "Username"
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                                            id: "username",
+                                            name: "username",
+                                            value: username,
+                                            onChange: (e)=>setUsername(e.target.value)
+                                            ,
+                                            type: "text",
+                                            autoComplete: "username",
+                                            required: true,
+                                            className: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
+                                            placeholder: "Enter Username",
+                                            __source: {
+                                                fileName: "src/Components/Login-View/Login.jsx",
+                                                lineNumber: 51,
+                                                columnNumber: 15
+                                            },
+                                            __self: this
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                                    __source: {
+                                        fileName: "src/Components/Login-View/Login.jsx",
+                                        lineNumber: 63,
+                                        columnNumber: 13
+                                    },
+                                    __self: this,
+                                    children: [
+                                        /*#__PURE__*/ _jsxRuntime.jsx("label", {
+                                            htmlFor: "password",
+                                            className: "sr-only",
+                                            __source: {
+                                                fileName: "src/Components/Login-View/Login.jsx",
+                                                lineNumber: 64,
+                                                columnNumber: 15
+                                            },
+                                            __self: this,
+                                            children: "Password"
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                                            id: "password",
+                                            name: "password",
+                                            value: password,
+                                            onChange: (e)=>setPassword(e.target.value)
+                                            ,
+                                            type: "password",
+                                            autoComplete: "current-password",
+                                            required: true,
+                                            className: " mt-4 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
+                                            placeholder: "Password",
+                                            __source: {
+                                                fileName: "src/Components/Login-View/Login.jsx",
+                                                lineNumber: 67,
+                                                columnNumber: 15
+                                            },
+                                            __self: this
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                            __source: {
+                                fileName: "src/Components/Login-View/Login.jsx",
+                                lineNumber: 81,
+                                columnNumber: 11
+                            },
+                            __self: this,
+                            children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                                type: "submit",
+                                className: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500",
+                                type: "submit",
+                                onClick: handleSubmit,
+                                __source: {
+                                    fileName: "src/Components/Login-View/Login.jsx",
+                                    lineNumber: 82,
+                                    columnNumber: 13
+                                },
+                                __self: this,
+                                children: "Sign in"
+                            })
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                            __source: {
+                                fileName: "src/Components/Login-View/Login.jsx",
+                                lineNumber: 91,
+                                columnNumber: 11
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsx("h5", {
+                                    className: "mt-6 text-center text-xl font-extrabold text-gray-900 ",
+                                    __source: {
+                                        fileName: "src/Components/Login-View/Login.jsx",
+                                        lineNumber: 92,
+                                        columnNumber: 13
+                                    },
+                                    __self: this,
+                                    children: "New User?"
+                                }),
+                                "  ",
+                                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                                    to: `/register`,
+                                    __source: {
+                                        fileName: "src/Components/Login-View/Login.jsx",
+                                        lineNumber: 96,
+                                        columnNumber: 13
+                                    },
+                                    __self: this,
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                                        className: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500",
+                                        variant: "warning",
+                                        type: "submit",
+                                        __source: {
+                                            fileName: "src/Components/Login-View/Login.jsx",
+                                            lineNumber: 97,
+                                            columnNumber: 15
+                                        },
+                                        __self: this,
+                                        children: "Register Here"
+                                    })
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        })
+    }));
+}
+_s(LoginView, "Lrw7JeD9zj6OUWhT/IH4OIvPKEk=");
+_c = LoginView;
+var _c;
+$RefreshReg$(_c, "LoginView");
+
+  $parcel$ReactRefreshHelpers$ad70.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"6Ds2u","axios":"1IeuP","react":"4mchR","react-bootstrap":"9qMdX","react-router-dom":"etVME","tailwindcss/tailwind.css":"bZa40","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"9qMdX":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Accordion", ()=>_accordionDefault.default
@@ -32361,46 +33346,7 @@ exports.default = (className)=>/*#__PURE__*/ _react.forwardRef((p, ref)=>/*#__PU
     )
 ;
 
-},{"react":"4mchR","classnames":"2cVcN","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"8IH8I":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _camelize = require("dom-helpers/camelize");
-var _camelizeDefault = parcelHelpers.interopDefault(_camelize);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const pascalCase = (str)=>str[0].toUpperCase() + _camelizeDefault.default(str).slice(1)
-;
-function createWithBsPrefix(prefix, { displayName =pascalCase(prefix) , Component , defaultProps  } = {
-}) {
-    const BsComponent = /*#__PURE__*/ _react.forwardRef(({ className , bsPrefix , as: Tag = Component || 'div' , ...props }, ref)=>{
-        const resolvedPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, prefix);
-        return(/*#__PURE__*/ _jsxRuntime.jsx(Tag, {
-            ref: ref,
-            className: _classnamesDefault.default(className, resolvedPrefix),
-            ...props
-        }));
-    });
-    BsComponent.defaultProps = defaultProps;
-    BsComponent.displayName = displayName;
-    return BsComponent;
-}
-exports.default = createWithBsPrefix;
-
-},{"classnames":"2cVcN","dom-helpers/camelize":"i1bzh","react":"4mchR","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"i1bzh":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var rHyphen = /-(.)/g;
-function camelize(string) {
-    return string.replace(rHyphen, function(_, chr) {
-        return chr.toUpperCase();
-    });
-}
-exports.default = camelize;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1sqBH":[function(require,module,exports) {
+},{"react":"4mchR","classnames":"2cVcN","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1sqBH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _anchor = require("@restart/ui/Anchor");
@@ -36150,52 +37096,7 @@ function contains(context, node) {
 }
 exports.default = contains;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"4vouU":[function(require,module,exports) {
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ 'use strict';
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */ var __DEV__ = true;
-var warning = function() {
-};
-if (__DEV__) {
-    var printWarning = function printWarning(format, args) {
-        var len = arguments.length;
-        args = new Array(len > 1 ? len - 1 : 0);
-        for(var key = 1; key < len; key++)args[key - 1] = arguments[key];
-        var argIndex = 0;
-        var message = 'Warning: ' + format.replace(/%s/g, function() {
-            return args[argIndex++];
-        });
-        if (typeof console !== 'undefined') console.error(message);
-        try {
-            // --- Welcome to debugging React ---
-            // This error was thrown as a convenience so that you can use this stack
-            // to find the callsite that caused this warning to fire.
-            throw new Error(message);
-        } catch (x) {
-        }
-    };
-    warning = function(condition, format, args) {
-        var len = arguments.length;
-        args = new Array(len > 2 ? len - 2 : 0);
-        for(var key = 2; key < len; key++)args[key - 2] = arguments[key];
-        if (format === undefined) throw new Error("`warning(condition, format, ...args)` requires a warning message argument");
-        if (!condition) printWarning.apply(null, [
-            format
-        ].concat(args));
-    };
-}
-module.exports = warning;
-
-},{}],"4lnJO":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"4lnJO":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "toModifierMap", ()=>toModifierMap
@@ -36876,459 +37777,7 @@ DropdownButton.displayName = 'DropdownButton';
 DropdownButton.propTypes = propTypes;
 exports.default = DropdownButton;
 
-},{"react":"4mchR","prop-types":"2bysO","./Dropdown":"7gNYx","./DropdownToggle":"6tN0k","./DropdownMenu":"Zo7sg","./types":"gcZF4","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"PeiIB":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _react = require("react");
-var _formCheck = require("./FormCheck");
-var _formCheckDefault = parcelHelpers.interopDefault(_formCheck);
-var _formControl = require("./FormControl");
-var _formControlDefault = parcelHelpers.interopDefault(_formControl);
-var _formFloating = require("./FormFloating");
-var _formFloatingDefault = parcelHelpers.interopDefault(_formFloating);
-var _formGroup = require("./FormGroup");
-var _formGroupDefault = parcelHelpers.interopDefault(_formGroup);
-var _formLabel = require("./FormLabel");
-var _formLabelDefault = parcelHelpers.interopDefault(_formLabel);
-var _formRange = require("./FormRange");
-var _formRangeDefault = parcelHelpers.interopDefault(_formRange);
-var _formSelect = require("./FormSelect");
-var _formSelectDefault = parcelHelpers.interopDefault(_formSelect);
-var _formText = require("./FormText");
-var _formTextDefault = parcelHelpers.interopDefault(_formText);
-var _switch = require("./Switch");
-var _switchDefault = parcelHelpers.interopDefault(_switch);
-var _floatingLabel = require("./FloatingLabel");
-var _floatingLabelDefault = parcelHelpers.interopDefault(_floatingLabel);
-var _jsxRuntime = require("react/jsx-runtime");
-const propTypes = {
-    /**
-   * The Form `ref` will be forwarded to the underlying element,
-   * which means, unless it's rendered `as` a composite component,
-   * it will be a DOM node, when resolved.
-   *
-   * @type {ReactRef}
-   * @alias ref
-   */ _ref: _propTypesDefault.default.any,
-    /**
-   * Mark a form as having been validated. Setting it to `true` will
-   * toggle any validation styles on the forms elements.
-   */ validated: _propTypesDefault.default.bool,
-    as: _propTypesDefault.default.elementType
-};
-const Form = /*#__PURE__*/ _react.forwardRef(({ className , validated , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = 'form' , ...props }, ref)=>/*#__PURE__*/ _jsxRuntime.jsx(Component, {
-        ...props,
-        ref: ref,
-        className: _classnamesDefault.default(className, validated && 'was-validated')
-    })
-);
-Form.displayName = 'Form';
-Form.propTypes = propTypes;
-exports.default = Object.assign(Form, {
-    Group: _formGroupDefault.default,
-    Control: _formControlDefault.default,
-    Floating: _formFloatingDefault.default,
-    Check: _formCheckDefault.default,
-    Switch: _switchDefault.default,
-    Label: _formLabelDefault.default,
-    Text: _formTextDefault.default,
-    Range: _formRangeDefault.default,
-    Select: _formSelectDefault.default,
-    FloatingLabel: _floatingLabelDefault.default
-});
-
-},{"classnames":"2cVcN","prop-types":"2bysO","react":"4mchR","./FormCheck":"k9egm","./FormControl":"3iZ43","./FormFloating":"2z0Ti","./FormGroup":"6eZW8","./FormLabel":"4E1MN","./FormRange":"g1L56","./FormSelect":"cLBuq","./FormText":"gsCyO","./Switch":"U0RUx","./FloatingLabel":"1Xz1h","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"k9egm":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _feedback = require("./Feedback");
-var _feedbackDefault = parcelHelpers.interopDefault(_feedback);
-var _formCheckInput = require("./FormCheckInput");
-var _formCheckInputDefault = parcelHelpers.interopDefault(_formCheckInput);
-var _formCheckLabel = require("./FormCheckLabel");
-var _formCheckLabelDefault = parcelHelpers.interopDefault(_formCheckLabel);
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const FormCheck = /*#__PURE__*/ _react.forwardRef(({ id , bsPrefix , bsSwitchPrefix , inline =false , disabled =false , isValid =false , isInvalid =false , feedbackTooltip =false , feedback , feedbackType , className , style , title ='' , type ='checkbox' , label , children , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as ='input' , ...props }, ref)=>{
-    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-check');
-    bsSwitchPrefix = _themeProvider.useBootstrapPrefix(bsSwitchPrefix, 'form-switch');
-    const { controlId  } = _react.useContext(_formContextDefault.default);
-    const innerFormContext = _react.useMemo(()=>({
-            controlId: id || controlId
-        })
-    , [
-        controlId,
-        id
-    ]);
-    const hasLabel = label != null && label !== false && !children;
-    const input = /*#__PURE__*/ _jsxRuntime.jsx(_formCheckInputDefault.default, {
-        ...props,
-        type: type === 'switch' ? 'checkbox' : type,
-        ref: ref,
-        isValid: isValid,
-        isInvalid: isInvalid,
-        disabled: disabled,
-        as: as
-    });
-    return(/*#__PURE__*/ _jsxRuntime.jsx(_formContextDefault.default.Provider, {
-        value: innerFormContext,
-        children: /*#__PURE__*/ _jsxRuntime.jsx("div", {
-            style: style,
-            className: _classnamesDefault.default(className, label && bsPrefix, inline && `${bsPrefix}-inline`, type === 'switch' && bsSwitchPrefix),
-            children: children || /*#__PURE__*/ _jsxRuntime.jsxs(_jsxRuntime.Fragment, {
-                children: [
-                    input,
-                    hasLabel && /*#__PURE__*/ _jsxRuntime.jsx(_formCheckLabelDefault.default, {
-                        title: title,
-                        children: label
-                    }),
-                    feedback && /*#__PURE__*/ _jsxRuntime.jsx(_feedbackDefault.default, {
-                        type: feedbackType,
-                        tooltip: feedbackTooltip,
-                        children: feedback
-                    })
-                ]
-            })
-        })
-    }));
-});
-FormCheck.displayName = 'FormCheck';
-exports.default = Object.assign(FormCheck, {
-    Input: _formCheckInputDefault.default,
-    Label: _formCheckLabelDefault.default
-});
-
-},{"classnames":"2cVcN","react":"4mchR","./Feedback":"3l6gp","./FormCheckInput":"fNTQv","./FormCheckLabel":"lyWnd","./FormContext":"axYdK","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"3l6gp":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _jsxRuntime = require("react/jsx-runtime");
-const propTypes = {
-    /**
-   * Specify whether the feedback is for valid or invalid fields
-   *
-   * @type {('valid'|'invalid')}
-   */ type: _propTypesDefault.default.string,
-    /** Display feedback as a tooltip. */ tooltip: _propTypesDefault.default.bool,
-    as: _propTypesDefault.default.elementType
-};
-const Feedback = /*#__PURE__*/ _react.forwardRef(({ as: Component = 'div' , className , type ='valid' , tooltip =false , ...props }, ref)=>/*#__PURE__*/ _jsxRuntime.jsx(Component, {
-        ...props,
-        ref: ref,
-        className: _classnamesDefault.default(className, `${type}-${tooltip ? 'tooltip' : 'feedback'}`)
-    })
-);
-Feedback.displayName = 'Feedback';
-Feedback.propTypes = propTypes;
-exports.default = Feedback;
-
-},{"classnames":"2cVcN","react":"4mchR","prop-types":"2bysO","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"fNTQv":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const FormCheckInput = /*#__PURE__*/ _react.forwardRef(({ id , bsPrefix , className , type ='checkbox' , isValid =false , isInvalid =false , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = 'input' , ...props }, ref)=>{
-    const { controlId  } = _react.useContext(_formContextDefault.default);
-    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-check-input');
-    return(/*#__PURE__*/ _jsxRuntime.jsx(Component, {
-        ...props,
-        ref: ref,
-        type: type,
-        id: id || controlId,
-        className: _classnamesDefault.default(className, bsPrefix, isValid && 'is-valid', isInvalid && 'is-invalid')
-    }));
-});
-FormCheckInput.displayName = 'FormCheckInput';
-exports.default = FormCheckInput;
-
-},{"classnames":"2cVcN","react":"4mchR","./FormContext":"axYdK","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"axYdK":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react"); // TODO
-const FormContext = /*#__PURE__*/ _react.createContext({
-});
-exports.default = FormContext;
-
-},{"react":"4mchR","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"lyWnd":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const FormCheckLabel = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , className , htmlFor , ...props }, ref)=>{
-    const { controlId  } = _react.useContext(_formContextDefault.default);
-    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-check-label');
-    return(/*#__PURE__*/ _jsxRuntime.jsx("label", {
-        ...props,
-        ref: ref,
-        htmlFor: htmlFor || controlId,
-        className: _classnamesDefault.default(className, bsPrefix)
-    }));
-});
-FormCheckLabel.displayName = 'FormCheckLabel';
-exports.default = FormCheckLabel;
-
-},{"classnames":"2cVcN","react":"4mchR","./FormContext":"axYdK","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"3iZ43":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _warning = require("warning");
-var _warningDefault = parcelHelpers.interopDefault(_warning);
-var _feedback = require("./Feedback");
-var _feedbackDefault = parcelHelpers.interopDefault(_feedback);
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const FormControl = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , type , size , htmlSize , id , className , isValid =false , isInvalid =false , plaintext , readOnly , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = 'input' , ...props }, ref)=>{
-    const { controlId  } = _react.useContext(_formContextDefault.default);
-    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-control');
-    let classes;
-    if (plaintext) classes = {
-        [`${bsPrefix}-plaintext`]: true
-    };
-    else classes = {
-        [bsPrefix]: true,
-        [`${bsPrefix}-${size}`]: size
-    };
-    _warningDefault.default(controlId == null || !id, '`controlId` is ignored on `<FormControl>` when `id` is specified.');
-    return(/*#__PURE__*/ _jsxRuntime.jsx(Component, {
-        ...props,
-        type: type,
-        size: htmlSize,
-        ref: ref,
-        readOnly: readOnly,
-        id: id || controlId,
-        className: _classnamesDefault.default(className, classes, isValid && `is-valid`, isInvalid && `is-invalid`, type === 'color' && `${bsPrefix}-color`)
-    }));
-});
-FormControl.displayName = 'FormControl';
-exports.default = Object.assign(FormControl, {
-    Feedback: _feedbackDefault.default
-});
-
-},{"classnames":"2cVcN","react":"4mchR","warning":"4vouU","./Feedback":"3l6gp","./FormContext":"axYdK","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"2z0Ti":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _createWithBsPrefix = require("./createWithBsPrefix");
-var _createWithBsPrefixDefault = parcelHelpers.interopDefault(_createWithBsPrefix);
-exports.default = _createWithBsPrefixDefault.default('form-floating');
-
-},{"./createWithBsPrefix":"8IH8I","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"6eZW8":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _jsxRuntime = require("react/jsx-runtime");
-const FormGroup = /*#__PURE__*/ _react.forwardRef(({ controlId , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = 'div' , ...props }, ref)=>{
-    const context = _react.useMemo(()=>({
-            controlId
-        })
-    , [
-        controlId
-    ]);
-    return(/*#__PURE__*/ _jsxRuntime.jsx(_formContextDefault.default.Provider, {
-        value: context,
-        children: /*#__PURE__*/ _jsxRuntime.jsx(Component, {
-            ...props,
-            ref: ref
-        })
-    }));
-});
-FormGroup.displayName = 'FormGroup';
-exports.default = FormGroup;
-
-},{"react":"4mchR","./FormContext":"axYdK","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"4E1MN":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _warning = require("warning");
-var _warningDefault = parcelHelpers.interopDefault(_warning);
-var _col = require("./Col");
-var _colDefault = parcelHelpers.interopDefault(_col);
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const defaultProps = {
-    column: false,
-    visuallyHidden: false
-};
-const FormLabel = /*#__PURE__*/ _react.forwardRef(({ // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = 'label' , bsPrefix , column , visuallyHidden , className , htmlFor , ...props }, ref)=>{
-    const { controlId  } = _react.useContext(_formContextDefault.default);
-    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-label');
-    let columnClass = 'col-form-label';
-    if (typeof column === 'string') columnClass = `${columnClass} ${columnClass}-${column}`;
-    const classes = _classnamesDefault.default(className, bsPrefix, visuallyHidden && 'visually-hidden', column && columnClass);
-    _warningDefault.default(controlId == null || !htmlFor, '`controlId` is ignored on `<FormLabel>` when `htmlFor` is specified.');
-    htmlFor = htmlFor || controlId;
-    if (column) return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-        ref: ref,
-        as: "label",
-        className: classes,
-        htmlFor: htmlFor,
-        ...props
-    }));
-    return(/*#__PURE__*/ // eslint-disable-next-line jsx-a11y/label-has-for, jsx-a11y/label-has-associated-control
-    _jsxRuntime.jsx(Component, {
-        ref: ref,
-        className: classes,
-        htmlFor: htmlFor,
-        ...props
-    }));
-});
-FormLabel.displayName = 'FormLabel';
-FormLabel.defaultProps = defaultProps;
-exports.default = FormLabel;
-
-},{"classnames":"2cVcN","react":"4mchR","warning":"4vouU","./Col":"kxhZp","./FormContext":"axYdK","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"g1L56":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _jsxRuntime = require("react/jsx-runtime");
-const FormRange = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , className , id , ...props }, ref)=>{
-    const { controlId  } = _react.useContext(_formContextDefault.default);
-    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-range');
-    return(/*#__PURE__*/ _jsxRuntime.jsx("input", {
-        ...props,
-        type: "range",
-        ref: ref,
-        className: _classnamesDefault.default(className, bsPrefix),
-        id: id || controlId
-    }));
-});
-FormRange.displayName = 'FormRange';
-exports.default = FormRange;
-
-},{"classnames":"2cVcN","react":"4mchR","./ThemeProvider":"oG7Uz","./FormContext":"axYdK","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"cLBuq":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _formContext = require("./FormContext");
-var _formContextDefault = parcelHelpers.interopDefault(_formContext);
-var _jsxRuntime = require("react/jsx-runtime");
-const FormSelect = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , size , htmlSize , className , isValid =false , isInvalid =false , id , ...props }, ref)=>{
-    const { controlId  } = _react.useContext(_formContextDefault.default);
-    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-select');
-    return(/*#__PURE__*/ _jsxRuntime.jsx("select", {
-        ...props,
-        size: htmlSize,
-        ref: ref,
-        className: _classnamesDefault.default(className, bsPrefix, size && `${bsPrefix}-${size}`, isValid && `is-valid`, isInvalid && `is-invalid`),
-        id: id || controlId
-    }));
-});
-FormSelect.displayName = 'FormSelect';
-exports.default = FormSelect;
-
-},{"classnames":"2cVcN","react":"4mchR","./ThemeProvider":"oG7Uz","./FormContext":"axYdK","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"gsCyO":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const FormText = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , className , as: Component = 'small' , muted , ...props }, ref)=>{
-    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-text');
-    return(/*#__PURE__*/ _jsxRuntime.jsx(Component, {
-        ...props,
-        ref: ref,
-        className: _classnamesDefault.default(className, bsPrefix, muted && 'text-muted')
-    }));
-});
-FormText.displayName = 'FormText';
-exports.default = FormText;
-
-},{"classnames":"2cVcN","react":"4mchR","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"U0RUx":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _formCheck = require("./FormCheck");
-var _formCheckDefault = parcelHelpers.interopDefault(_formCheck);
-var _jsxRuntime = require("react/jsx-runtime");
-const Switch = /*#__PURE__*/ _react.forwardRef((props, ref)=>/*#__PURE__*/ _jsxRuntime.jsx(_formCheckDefault.default, {
-        ...props,
-        ref: ref,
-        type: "switch"
-    })
-);
-Switch.displayName = 'Switch';
-exports.default = Object.assign(Switch, {
-    Input: _formCheckDefault.default.Input,
-    Label: _formCheckDefault.default.Label
-});
-
-},{"react":"4mchR","./FormCheck":"k9egm","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1Xz1h":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _formGroup = require("./FormGroup");
-var _formGroupDefault = parcelHelpers.interopDefault(_formGroup);
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-const FloatingLabel = /*#__PURE__*/ _react.forwardRef(({ bsPrefix , className , children , controlId , label , ...props }, ref)=>{
-    bsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'form-floating');
-    return(/*#__PURE__*/ _jsxRuntime.jsxs(_formGroupDefault.default, {
-        ref: ref,
-        className: _classnamesDefault.default(className, bsPrefix),
-        controlId: controlId,
-        ...props,
-        children: [
-            children,
-            /*#__PURE__*/ _jsxRuntime.jsx("label", {
-                htmlFor: controlId,
-                children: label
-            })
-        ]
-    }));
-});
-FloatingLabel.displayName = 'FloatingLabel';
-exports.default = FloatingLabel;
-
-},{"classnames":"2cVcN","react":"4mchR","./FormGroup":"6eZW8","./ThemeProvider":"oG7Uz","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"gFkXb":[function(require,module,exports) {
+},{"react":"4mchR","prop-types":"2bysO","./Dropdown":"7gNYx","./DropdownToggle":"6tN0k","./DropdownMenu":"Zo7sg","./types":"gcZF4","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"gFkXb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -41143,504 +41592,7 @@ Tooltip.defaultProps = defaultProps;
 Tooltip.displayName = 'Tooltip';
 exports.default = Tooltip;
 
-},{"classnames":"2cVcN","react":"4mchR","./ThemeProvider":"oG7Uz","./helpers":"4wQJ9","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"11VDq":[function() {},{}],"bZa40":[function() {},{}],"9pz13":[function(require,module,exports) {
-"use strict";
-var Refresh = require('react-refresh/runtime');
-function debounce(func, delay) {
-    var args1;
-    var timeout = undefined;
-    return function(args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
-            timeout = undefined;
-            func.call(null, args);
-        }, delay);
-    };
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30); // Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module.id + ' ' + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module) {
-    if (isReactRefreshBoundary(module.exports)) {
-        registerExportsForReactRefresh(module);
-        if (module.hot) {
-            module.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module.exports;
-            });
-            module.hot.accept(function(getParents) {
-                var prevExports = module.hot.data.prevExports;
-                var nextExports = module.exports; // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-} // When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module) {
-    var exports = module.exports, id = module.id;
-    Refresh.register(exports, id + ' %exports%');
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        Refresh.register(exportValue, id + ' %exports% ' + key);
-    }
-}
-
-},{"react-refresh/runtime":"aeH4U"}],"15lqU":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$804d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$804d.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxRuntime = require("react/jsx-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRedux = require("react-redux");
-var _form = require("react-bootstrap/Form");
-var _formDefault = parcelHelpers.interopDefault(_form);
-var _actions = require("../../actions/Actions");
-function VisibilityFilterInput(props) {
-    return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-        className: "mt-12 center",
-        __source: {
-            fileName: "src/Components/visibility-filter-input/visibility-filter-input.jsx",
-            lineNumber: 10,
-            columnNumber: 5
-        },
-        __self: this,
-        children: /*#__PURE__*/ _jsxRuntime.jsx("input", {
-            id: "visibility-search",
-            value: props.VisibilityFilter,
-            onChange: (e)=>props.setFilter(e.target.value)
-            ,
-            className: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm",
-            placeholder: "Search Movies",
-            __source: {
-                fileName: "src/Components/visibility-filter-input/visibility-filter-input.jsx",
-                lineNumber: 11,
-                columnNumber: 7
-            },
-            __self: this
-        })
-    }));
-}
-_c = VisibilityFilterInput;
-exports.default = _reactRedux.connect(null, {
-    setFilter: _actions.setFilter
-})(VisibilityFilterInput); // connecting a component with an action allows you to receive the actual action as a prop
-var _c;
-$RefreshReg$(_c, "VisibilityFilterInput");
-
-  $parcel$ReactRefreshHelpers$804d.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-runtime":"6Ds2u","react":"4mchR","react-redux":"lT3ms","react-bootstrap/Form":"PeiIB","../../actions/Actions":"ffAqt","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"c92xC":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ad70 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ad70.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "LoginView", ()=>LoginView
-) /* mt-6 text-center text-3xl font-extrabold text-gray-900 */ ;
-var _jsxRuntime = require("react/jsx-runtime");
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactBootstrap = require("react-bootstrap");
-var _reactRouterDom = require("react-router-dom");
-var _tailwindCss = require("tailwindcss/tailwind.css");
-var _s = $RefreshSig$();
-function LoginView(props) {
-    _s();
-    const [username, setUsername] = _react.useState("");
-    const [password, setPassword] = _react.useState("");
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        _axiosDefault.default.post("https://my-flix-2406.herokuapp.com/login", {
-            Username: username,
-            Password: password
-        }).then((response)=>{
-            const data = response.data;
-            console.log(username, password);
-            props.onLoggedIn(data);
-        }).catch((e)=>{
-            console.log("Login details incorrect. Please check your username and password.");
-        });
-    };
-    return(/* <Row>
-      <Col></Col>
-      <Col sm={8}>
-        <CardGroup>
-          <Card>
-            <Card.Body>
-              <Form className="Login" noValidate>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Username</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    required
-                  />
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                  />
-                </Form.Group>
-                <Button variant="warning" type="submit" onClick={handleSubmit}>
-                  Login
-                </Button>
-                <br />
-                <br />
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                  <Form.Label> New User? </Form.Label> {}
-                  <br />
-                  <Link to={`/register`}>
-                    <Button variant="warning" type="submit">
-                      Register Here
-                    </Button>
-                  </Link>
-                </Form.Group>
-              </Form>
-            </Card.Body>
-          </Card>
-        </CardGroup>
-      </Col>
-      <Col></Col>
-    </Row> */ /*#__PURE__*/ _jsxRuntime.jsx("div", {
-        className: "min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8",
-        __source: {
-            fileName: "src/Components/Login-View/Login.jsx",
-            lineNumber: 81,
-            columnNumber: 5
-        },
-        __self: this,
-        children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-            className: "max-w-md w-full space-y-8",
-            __source: {
-                fileName: "src/Components/Login-View/Login.jsx",
-                lineNumber: 82,
-                columnNumber: 7
-            },
-            __self: this,
-            children: [
-                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                    __source: {
-                        fileName: "src/Components/Login-View/Login.jsx",
-                        lineNumber: 83,
-                        columnNumber: 9
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx("img", {
-                            className: "mx-auto h-12 w-auto",
-                            crossOrigin: "https://imgur.com",
-                            src: "https://i.imgur.com/IOx97Xx.png",
-                            alt: "Workflow",
-                            __source: {
-                                fileName: "src/Components/Login-View/Login.jsx",
-                                lineNumber: 84,
-                                columnNumber: 11
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx("h2", {
-                            className: "mt-6 text-center text-3xl font-extrabold text-gray-900",
-                            __source: {
-                                fileName: "src/Components/Login-View/Login.jsx",
-                                lineNumber: 90,
-                                columnNumber: 11
-                            },
-                            __self: this,
-                            children: "Sign in to your account"
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs("form", {
-                    className: "mt-8 space-y-6",
-                    action: "#",
-                    method: "POST",
-                    __source: {
-                        fileName: "src/Components/Login-View/Login.jsx",
-                        lineNumber: 94,
-                        columnNumber: 9
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx("input", {
-                            type: "hidden",
-                            name: "remember",
-                            defaultValue: "true",
-                            __source: {
-                                fileName: "src/Components/Login-View/Login.jsx",
-                                lineNumber: 95,
-                                columnNumber: 11
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                            className: "rounded-md shadow-sm -space-y-px",
-                            __source: {
-                                fileName: "src/Components/Login-View/Login.jsx",
-                                lineNumber: 96,
-                                columnNumber: 11
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                                    __source: {
-                                        fileName: "src/Components/Login-View/Login.jsx",
-                                        lineNumber: 97,
-                                        columnNumber: 13
-                                    },
-                                    __self: this,
-                                    children: [
-                                        /*#__PURE__*/ _jsxRuntime.jsx("label", {
-                                            htmlFor: "username",
-                                            className: "sr-only",
-                                            __source: {
-                                                fileName: "src/Components/Login-View/Login.jsx",
-                                                lineNumber: 98,
-                                                columnNumber: 15
-                                            },
-                                            __self: this,
-                                            children: "Username"
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx("input", {
-                                            id: "username",
-                                            name: "username",
-                                            value: username,
-                                            onChange: (e)=>setUsername(e.target.value)
-                                            ,
-                                            type: "text",
-                                            autoComplete: "username",
-                                            required: true,
-                                            className: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
-                                            placeholder: "Enter Username",
-                                            __source: {
-                                                fileName: "src/Components/Login-View/Login.jsx",
-                                                lineNumber: 101,
-                                                columnNumber: 15
-                                            },
-                                            __self: this
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                                    __source: {
-                                        fileName: "src/Components/Login-View/Login.jsx",
-                                        lineNumber: 113,
-                                        columnNumber: 13
-                                    },
-                                    __self: this,
-                                    children: [
-                                        /*#__PURE__*/ _jsxRuntime.jsx("label", {
-                                            htmlFor: "password",
-                                            className: "sr-only",
-                                            __source: {
-                                                fileName: "src/Components/Login-View/Login.jsx",
-                                                lineNumber: 114,
-                                                columnNumber: 15
-                                            },
-                                            __self: this,
-                                            children: "Password"
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx("input", {
-                                            id: "password",
-                                            name: "password",
-                                            value: password,
-                                            onChange: (e)=>setPassword(e.target.value)
-                                            ,
-                                            type: "password",
-                                            autoComplete: "current-password",
-                                            required: true,
-                                            className: " mt-4 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
-                                            placeholder: "Password",
-                                            __source: {
-                                                fileName: "src/Components/Login-View/Login.jsx",
-                                                lineNumber: 117,
-                                                columnNumber: 15
-                                            },
-                                            __self: this
-                                        })
-                                    ]
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                            __source: {
-                                fileName: "src/Components/Login-View/Login.jsx",
-                                lineNumber: 131,
-                                columnNumber: 11
-                            },
-                            __self: this,
-                            children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
-                                type: "submit",
-                                className: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500",
-                                type: "submit",
-                                onClick: handleSubmit,
-                                __source: {
-                                    fileName: "src/Components/Login-View/Login.jsx",
-                                    lineNumber: 132,
-                                    columnNumber: 13
-                                },
-                                __self: this,
-                                children: "Sign in"
-                            })
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                            __source: {
-                                fileName: "src/Components/Login-View/Login.jsx",
-                                lineNumber: 141,
-                                columnNumber: 11
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx("h5", {
-                                    className: "mt-6 text-center text-xl font-extrabold text-gray-900 ",
-                                    __source: {
-                                        fileName: "src/Components/Login-View/Login.jsx",
-                                        lineNumber: 142,
-                                        columnNumber: 13
-                                    },
-                                    __self: this,
-                                    children: "New User?"
-                                }),
-                                "  ",
-                                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                    to: `/register`,
-                                    __source: {
-                                        fileName: "src/Components/Login-View/Login.jsx",
-                                        lineNumber: 146,
-                                        columnNumber: 13
-                                    },
-                                    __self: this,
-                                    children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
-                                        className: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500",
-                                        variant: "warning",
-                                        type: "submit",
-                                        __source: {
-                                            fileName: "src/Components/Login-View/Login.jsx",
-                                            lineNumber: 147,
-                                            columnNumber: 15
-                                        },
-                                        __self: this,
-                                        children: "Register Here"
-                                    })
-                                })
-                            ]
-                        })
-                    ]
-                })
-            ]
-        })
-    }));
-}
-_s(LoginView, "Lrw7JeD9zj6OUWhT/IH4OIvPKEk=");
-_c = LoginView;
-var _c;
-$RefreshReg$(_c, "LoginView");
-
-  $parcel$ReactRefreshHelpers$ad70.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-runtime":"6Ds2u","axios":"1IeuP","react":"4mchR","react-bootstrap":"9qMdX","react-router-dom":"etVME","tailwindcss/tailwind.css":"bZa40","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"bZa40":[function() {},{}],"3fOo0":[function(require,module,exports) {
+},{"classnames":"2cVcN","react":"4mchR","./ThemeProvider":"oG7Uz","./helpers":"4wQJ9","react/jsx-runtime":"6Ds2u","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"bZa40":[function() {},{}],"3fOo0":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3e84 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41664,7 +41616,7 @@ var _solid = require("@heroicons/react/solid");
 var _favButton = require("../Favorite-List/FavButton");
 var _favButtonDefault = parcelHelpers.interopDefault(_favButton);
 var _navigationBar = require("../navigation-bar/navigation-bar");
-/* import { Container, Button, Row, Col, Card } from "react-bootstrap"; */ var _reactRouterDom = require("react-router-dom");
+var _reactRouterDom = require("react-router-dom");
 var _movieViewScss = require("./MovieView.scss");
 var _tailwindCss = require("tailwindcss/tailwind.css");
 class MovieView extends _react.Component {
@@ -41702,7 +41654,7 @@ class MovieView extends _react.Component {
             className: "bg-white ",
             __source: {
                 fileName: "src/Components/Movie-View/MovieView.jsx",
-                lineNumber: 61,
+                lineNumber: 60,
                 columnNumber: 7
             },
             __self: this,
@@ -41710,14 +41662,14 @@ class MovieView extends _react.Component {
                 className: " max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8",
                 __source: {
                     fileName: "src/Components/Movie-View/MovieView.jsx",
-                    lineNumber: 62,
+                    lineNumber: 61,
                     columnNumber: 9
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                     __source: {
                         fileName: "src/Components/Movie-View/MovieView.jsx",
-                        lineNumber: 63,
+                        lineNumber: 62,
                         columnNumber: 11
                     },
                     __self: this,
@@ -41726,7 +41678,7 @@ class MovieView extends _react.Component {
                             className: "w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-screen lg:aspect-none",
                             __source: {
                                 fileName: "src/Components/Movie-View/MovieView.jsx",
-                                lineNumber: 64,
+                                lineNumber: 63,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -41737,7 +41689,7 @@ class MovieView extends _react.Component {
                                 className: "w-full h-full object-center object-cover lg:w-full lg:h-full",
                                 __source: {
                                     fileName: "src/Components/Movie-View/MovieView.jsx",
-                                    lineNumber: 65,
+                                    lineNumber: 64,
                                     columnNumber: 15
                                 },
                                 __self: this
@@ -41747,14 +41699,14 @@ class MovieView extends _react.Component {
                             className: "mt-4 flex justify-between",
                             __source: {
                                 fileName: "src/Components/Movie-View/MovieView.jsx",
-                                lineNumber: 72,
+                                lineNumber: 71,
                                 columnNumber: 13
                             },
                             __self: this,
                             children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                                 __source: {
                                     fileName: "src/Components/Movie-View/MovieView.jsx",
-                                    lineNumber: 73,
+                                    lineNumber: 72,
                                     columnNumber: 15
                                 },
                                 __self: this,
@@ -41763,7 +41715,7 @@ class MovieView extends _react.Component {
                                         className: "text-lg justify-center font-extrabold text-black",
                                         __source: {
                                             fileName: "src/Components/Movie-View/MovieView.jsx",
-                                            lineNumber: 74,
+                                            lineNumber: 73,
                                             columnNumber: 17
                                         },
                                         __self: this,
@@ -41773,7 +41725,7 @@ class MovieView extends _react.Component {
                                                 className: "absolute inset-0",
                                                 __source: {
                                                     fileName: "src/Components/Movie-View/MovieView.jsx",
-                                                    lineNumber: 75,
+                                                    lineNumber: 74,
                                                     columnNumber: 19
                                                 },
                                                 __self: this
@@ -41785,7 +41737,7 @@ class MovieView extends _react.Component {
                                         className: "mt-1 text-sm text-gray-500",
                                         __source: {
                                             fileName: "src/Components/Movie-View/MovieView.jsx",
-                                            lineNumber: 78,
+                                            lineNumber: 77,
                                             columnNumber: 17
                                         },
                                         __self: this,
@@ -41798,7 +41750,7 @@ class MovieView extends _react.Component {
                             className: " mt-4 grid grid-cols-1 gap-y-5 gap-x-3 sm:grid-cols-2",
                             __source: {
                                 fileName: "src/Components/Movie-View/MovieView.jsx",
-                                lineNumber: 87,
+                                lineNumber: 83,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -41807,7 +41759,7 @@ class MovieView extends _react.Component {
                                     to: `/directors/${movie.Director.Name}`,
                                     __source: {
                                         fileName: "src/Components/Movie-View/MovieView.jsx",
-                                        lineNumber: 88,
+                                        lineNumber: 84,
                                         columnNumber: 15
                                     },
                                     __self: this,
@@ -41816,7 +41768,7 @@ class MovieView extends _react.Component {
                                         variant: "warning",
                                         __source: {
                                             fileName: "src/Components/Movie-View/MovieView.jsx",
-                                            lineNumber: 89,
+                                            lineNumber: 85,
                                             columnNumber: 17
                                         },
                                         __self: this,
@@ -41828,7 +41780,7 @@ class MovieView extends _react.Component {
                                     to: `/genres/${movie.Genre.Name}`,
                                     __source: {
                                         fileName: "src/Components/Movie-View/MovieView.jsx",
-                                        lineNumber: 97,
+                                        lineNumber: 93,
                                         columnNumber: 15
                                     },
                                     __self: this,
@@ -41837,7 +41789,7 @@ class MovieView extends _react.Component {
                                         variant: "warning",
                                         __source: {
                                             fileName: "src/Components/Movie-View/MovieView.jsx",
-                                            lineNumber: 98,
+                                            lineNumber: 94,
                                             columnNumber: 17
                                         },
                                         __self: this,
@@ -41849,7 +41801,7 @@ class MovieView extends _react.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx("div", {
                             __source: {
                                 fileName: "src/Components/Movie-View/MovieView.jsx",
-                                lineNumber: 107,
+                                lineNumber: 103,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -41862,7 +41814,7 @@ class MovieView extends _react.Component {
                                 type: "submit",
                                 __source: {
                                     fileName: "src/Components/Movie-View/MovieView.jsx",
-                                    lineNumber: 108,
+                                    lineNumber: 104,
                                     columnNumber: 15
                                 },
                                 __self: this,
@@ -41872,7 +41824,7 @@ class MovieView extends _react.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx("div", {
                             __source: {
                                 fileName: "src/Components/Movie-View/MovieView.jsx",
-                                lineNumber: 119,
+                                lineNumber: 115,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -41884,7 +41836,7 @@ class MovieView extends _react.Component {
                                 },
                                 __source: {
                                     fileName: "src/Components/Movie-View/MovieView.jsx",
-                                    lineNumber: 120,
+                                    lineNumber: 116,
                                     columnNumber: 15
                                 },
                                 __self: this,
@@ -41893,7 +41845,7 @@ class MovieView extends _react.Component {
                                         className: "block h-6 w-6",
                                         __source: {
                                             fileName: "src/Components/Movie-View/MovieView.jsx",
-                                            lineNumber: 128,
+                                            lineNumber: 124,
                                             columnNumber: 17
                                         },
                                         __self: this
@@ -41905,7 +41857,7 @@ class MovieView extends _react.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx("div", {
                             __source: {
                                 fileName: "src/Components/Movie-View/MovieView.jsx",
-                                lineNumber: 132,
+                                lineNumber: 128,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -41917,7 +41869,7 @@ class MovieView extends _react.Component {
                                 },
                                 __source: {
                                     fileName: "src/Components/Movie-View/MovieView.jsx",
-                                    lineNumber: 133,
+                                    lineNumber: 129,
                                     columnNumber: 15
                                 },
                                 __self: this,
@@ -41926,7 +41878,7 @@ class MovieView extends _react.Component {
                                         className: "block h-6 w-6",
                                         __source: {
                                             fileName: "src/Components/Movie-View/MovieView.jsx",
-                                            lineNumber: 141,
+                                            lineNumber: 137,
                                             columnNumber: 17
                                         },
                                         __self: this
@@ -58253,15 +58205,12 @@ class NavigationBar extends _reactDefault.default.Component {
         const movies = `/`;
         const profile = `/users/${username}`;
         const logout = `/`;
-        /* const classNames = (...classes) => {
-      return classes.filter(Boolean).join(" ");
-    };
- */ return(/*#__PURE__*/ _jsxRuntime.jsx(_react1.Disclosure, {
+        return(/*#__PURE__*/ _jsxRuntime.jsx(_react1.Disclosure, {
             as: "nav",
             className: "bg-white w-screen border-gray-300 border-double border-b-4 ",
             __source: {
                 fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                lineNumber: 30,
+                lineNumber: 26,
                 columnNumber: 7
             },
             __self: this,
@@ -58270,7 +58219,7 @@ class NavigationBar extends _reactDefault.default.Component {
                         className: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 ",
                         __source: {
                             fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                            lineNumber: 36,
+                            lineNumber: 32,
                             columnNumber: 13
                         },
                         __self: this,
@@ -58278,7 +58227,7 @@ class NavigationBar extends _reactDefault.default.Component {
                             className: "relative flex items-center justify-between h-24 ",
                             __source: {
                                 fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                lineNumber: 37,
+                                lineNumber: 33,
                                 columnNumber: 15
                             },
                             __self: this,
@@ -58287,28 +58236,38 @@ class NavigationBar extends _reactDefault.default.Component {
                                     className: "flex-shrink-0 flex items-center",
                                     __source: {
                                         fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 39,
+                                        lineNumber: 34,
                                         columnNumber: 17
                                     },
                                     __self: this,
-                                    children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
-                                        className: "block h-24 w-30",
-                                        crossOrigin: "https://imgur.com",
-                                        src: "https://i.imgur.com/IOx97Xx.png",
-                                        alt: "Workflow",
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx("a", {
+                                        as: _reactRouterDom.Link,
+                                        href: `/`,
                                         __source: {
                                             fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                            lineNumber: 40,
+                                            lineNumber: 35,
                                             columnNumber: 19
                                         },
-                                        __self: this
+                                        __self: this,
+                                        children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
+                                            className: "block h-24 w-30",
+                                            crossOrigin: "https://imgur.com",
+                                            src: "https://i.imgur.com/IOx97Xx.png",
+                                            alt: "Workflow",
+                                            __source: {
+                                                fileName: "src/Components/navigation-bar/navigation-bar.jsx",
+                                                lineNumber: 36,
+                                                columnNumber: 21
+                                            },
+                                            __self: this
+                                        })
                                     })
                                 }),
                                 /*#__PURE__*/ _jsxRuntime.jsx("div", {
                                     className: "absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 z-10 ",
                                     __source: {
                                         fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 48,
+                                        lineNumber: 45,
                                         columnNumber: 17
                                     },
                                     __self: this,
@@ -58317,7 +58276,7 @@ class NavigationBar extends _reactDefault.default.Component {
                                         className: "ml-3 relative",
                                         __source: {
                                             fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                            lineNumber: 49,
+                                            lineNumber: 46,
                                             columnNumber: 19
                                         },
                                         __self: this,
@@ -58325,7 +58284,7 @@ class NavigationBar extends _reactDefault.default.Component {
                                             /*#__PURE__*/ _jsxRuntime.jsx("div", {
                                                 __source: {
                                                     fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                                    lineNumber: 50,
+                                                    lineNumber: 47,
                                                     columnNumber: 21
                                                 },
                                                 __self: this,
@@ -58333,7 +58292,7 @@ class NavigationBar extends _reactDefault.default.Component {
                                                     className: "bg-white flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-800 focus:ring-white",
                                                     __source: {
                                                         fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                                        lineNumber: 51,
+                                                        lineNumber: 48,
                                                         columnNumber: 23
                                                     },
                                                     __self: this,
@@ -58342,7 +58301,7 @@ class NavigationBar extends _reactDefault.default.Component {
                                                             className: "sr-only",
                                                             __source: {
                                                                 fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                                                lineNumber: 52,
+                                                                lineNumber: 49,
                                                                 columnNumber: 25
                                                             },
                                                             __self: this,
@@ -58353,7 +58312,7 @@ class NavigationBar extends _reactDefault.default.Component {
                                                             "aria-hidden": "true",
                                                             __source: {
                                                                 fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                                                lineNumber: 53,
+                                                                lineNumber: 50,
                                                                 columnNumber: 25
                                                             },
                                                             __self: this
@@ -58371,7 +58330,7 @@ class NavigationBar extends _reactDefault.default.Component {
                                                 leaveTo: "transform opacity-0 scale-95",
                                                 __source: {
                                                     fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                                    lineNumber: 59,
+                                                    lineNumber: 56,
                                                     columnNumber: 21
                                                 },
                                                 __self: this,
@@ -58379,7 +58338,7 @@ class NavigationBar extends _reactDefault.default.Component {
                                                     className: "origin-top-right relative right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none",
                                                     __source: {
                                                         fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                                        lineNumber: 68,
+                                                        lineNumber: 65,
                                                         columnNumber: 23
                                                     },
                                                     __self: this,
@@ -58387,17 +58346,17 @@ class NavigationBar extends _reactDefault.default.Component {
                                                         /*#__PURE__*/ _jsxRuntime.jsx(_react1.Menu.Item, {
                                                             __source: {
                                                                 fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                                                lineNumber: 69,
+                                                                lineNumber: 66,
                                                                 columnNumber: 25
                                                             },
                                                             __self: this,
                                                             children: ({ active  })=>/*#__PURE__*/ _jsxRuntime.jsx("a", {
                                                                     as: _reactRouterDom.Link,
                                                                     href: profile,
-                                                                    className: (active && "bg-gray-100", "block px-4 py-2 text-sm text-gray-700"),
+                                                                    className: (active && "bg-gray-100", "block px-4 py-2 text-sm text-gray-700 hover:text-gray-400 "),
                                                                     __source: {
                                                                         fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                                                        lineNumber: 71,
+                                                                        lineNumber: 68,
                                                                         columnNumber: 29
                                                                     },
                                                                     __self: this,
@@ -58407,17 +58366,17 @@ class NavigationBar extends _reactDefault.default.Component {
                                                         /*#__PURE__*/ _jsxRuntime.jsx(_react1.Menu.Item, {
                                                             __source: {
                                                                 fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                                                lineNumber: 84,
+                                                                lineNumber: 81,
                                                                 columnNumber: 25
                                                             },
                                                             __self: this,
                                                             children: ({ active  })=>/*#__PURE__*/ _jsxRuntime.jsx("a", {
                                                                     as: _reactRouterDom.Link,
                                                                     href: `/`,
-                                                                    className: (active && "bg-gray-100", "block px-4 py-2 text-sm text-gray-700"),
+                                                                    className: (active && "bg-gray-100", "block px-4 py-2 text-sm text-gray-700 hover:text-gray-400"),
                                                                     __source: {
                                                                         fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                                                        lineNumber: 86,
+                                                                        lineNumber: 83,
                                                                         columnNumber: 29
                                                                     },
                                                                     __self: this,
@@ -58427,17 +58386,17 @@ class NavigationBar extends _reactDefault.default.Component {
                                                         /*#__PURE__*/ _jsxRuntime.jsx(_react1.Menu.Item, {
                                                             __source: {
                                                                 fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                                                lineNumber: 99,
+                                                                lineNumber: 96,
                                                                 columnNumber: 25
                                                             },
                                                             __self: this,
                                                             children: ({ active  })=>/*#__PURE__*/ _jsxRuntime.jsx("a", {
                                                                     href: "/",
                                                                     onClick: this.onLoggedOut,
-                                                                    className: (active && "bg-gray-100", "block px-4 py-2 text-sm text-gray-700"),
+                                                                    className: (active && "bg-gray-100", "block px-4 py-2 text-sm text-gray-700 hover:text-gray-400"),
                                                                     __source: {
                                                                         fileName: "src/Components/navigation-bar/navigation-bar.jsx",
-                                                                        lineNumber: 101,
+                                                                        lineNumber: 98,
                                                                         columnNumber: 29
                                                                     },
                                                                     __self: this,
@@ -58473,116 +58432,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "RegistrationView", ()=>RegistrationView
-) /*  <form>
-      <label>
-        Username:
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </label>
-      <label>
-        Password:
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </label>
-      <label>
-        Password:
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </label>
-      <label>
-        Password:
-        <input
-          type="birthday"
-          value={birthday}
-          onChange={(e) => setBirthday(e.target.value)}
-        />
-      </label>
-      <button type="submit" onClick={handleSubmit}>
-        Submit
-      </button>
-    </form> */  /* <Row>
-      <Col></Col>
-      <Col sm={8}>
-        <CardGroup>
-          <Card>
-            <Card.Body>
-              <Form noValidate>
-                <Form.Group className="mb-3" controlId="formBasicUsername">
-                  <Form.Label>Username</Form.Label>
-                  <Form.Control
-                    type="username"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    required
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control
-                    type="email"
-                    placeholder="Enter email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                  </Form.Text>
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    placeholder="Your password must be 8 or more characters"
-                    minLength="8"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Label>Birthday</Form.Label>
-                  <Form.Control
-                    type="birthday"
-                    placeholder="Birthday"
-                    value={birthday}
-                    onChange={(e) => setBirthday(e.target.value)}
-                    required
-                  />
-                </Form.Group>
-
-                <Button variant="warning" type="submit" onClick={handleSubmit}>
-                  Register
-                </Button>
-                <br />
-                <br />
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                  <Form.Label> Already Registered? </Form.Label> {}
-                  <br />
-                  <Link to={`/`}>
-                    <Button variant="warning" type="submit">
-                      Login Here
-                    </Button>
-                  </Link>
-                </Form.Group>
-              </Form>
-            </Card.Body>
-          </Card>
-        </CardGroup>
-      </Col>
-      <Col></Col>
-    </Row> */ ;
+);
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
@@ -58940,28 +58790,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "GenreView", ()=>GenreView
-) /* <Row>
-        <Col></Col>
-        <Col>
-          <Card style={{ width: "18rem" }}>
-            {/* <Card.Img variant="top" src={genre.ImagePath} /> */  /* <Card.Body>
-              <Card.Title>{genre.Name}</Card.Title>
-              <Card.Text>{genre.Description}</Card.Text>
-              <Link to={`/`}>
-                <Button
-                  variant="warning"
-                  onClick={() => {
-                    onBackClick(null);
-                  }}
-                >
-                  Back
-                </Button>
-              </Link>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col></Col>
-      </Row> */ ;
+);
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
@@ -58998,14 +58827,14 @@ class GenreView extends _react.Component {
                             className: "mt-4 flex justify-between",
                             __source: {
                                 fileName: "src/Components/Genre-View/Genre.jsx",
-                                lineNumber: 20,
+                                lineNumber: 12,
                                 columnNumber: 13
                             },
                             __self: this,
                             children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                                 __source: {
                                     fileName: "src/Components/Genre-View/Genre.jsx",
-                                    lineNumber: 21,
+                                    lineNumber: 13,
                                     columnNumber: 15
                                 },
                                 __self: this,
@@ -59014,7 +58843,7 @@ class GenreView extends _react.Component {
                                         className: "text-lg text-center justify-center font-extrabold text-black",
                                         __source: {
                                             fileName: "src/Components/Genre-View/Genre.jsx",
-                                            lineNumber: 22,
+                                            lineNumber: 14,
                                             columnNumber: 17
                                         },
                                         __self: this,
@@ -59024,7 +58853,7 @@ class GenreView extends _react.Component {
                                                 className: "absolute inset-0",
                                                 __source: {
                                                     fileName: "src/Components/Genre-View/Genre.jsx",
-                                                    lineNumber: 23,
+                                                    lineNumber: 15,
                                                     columnNumber: 19
                                                 },
                                                 __self: this
@@ -59036,7 +58865,7 @@ class GenreView extends _react.Component {
                                         className: "mt-1 text-center text-sm text-gray-500",
                                         __source: {
                                             fileName: "src/Components/Genre-View/Genre.jsx",
-                                            lineNumber: 26,
+                                            lineNumber: 18,
                                             columnNumber: 17
                                         },
                                         __self: this,
@@ -59048,7 +58877,7 @@ class GenreView extends _react.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx("div", {
                             __source: {
                                 fileName: "src/Components/Genre-View/Genre.jsx",
-                                lineNumber: 32,
+                                lineNumber: 23,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -59057,11 +58886,11 @@ class GenreView extends _react.Component {
                                 onClick: ()=>{
                                     onBackClick(null);
                                 },
-                                className: "mt-14 group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500",
+                                className: "mt-14 mx-auto group relative w-24 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500",
                                 type: "submit",
                                 __source: {
                                     fileName: "src/Components/Genre-View/Genre.jsx",
-                                    lineNumber: 33,
+                                    lineNumber: 24,
                                     columnNumber: 15
                                 },
                                 __self: this,
@@ -59090,28 +58919,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "DirectorView", ()=>DirectorView
-) /* <Row>
-        <Col></Col>
-        <Col>
-          <Card border="warning" style={{ width: "18rem" }}>
-            {/* <Card.Img variant="top" src={director.ImagePath} /> */  /* <Card.Body>
-              <Card.Title>{director.Name}</Card.Title>
-              <Card.Text>{director.Bio}</Card.Text>
-              <Link to={`/`}>
-                <Button
-                  onClick={() => {
-                    onBackClick(null);
-                  }}
-                  variant="warning"
-                >
-                  Back
-                </Button>
-              </Link>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col></Col>
-      </Row> */ ;
+);
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
@@ -59149,14 +58957,14 @@ class DirectorView extends _react.Component {
                             className: "mt-4 flex justify-between",
                             __source: {
                                 fileName: "src/Components/Director-View/Director.jsx",
-                                lineNumber: 21,
+                                lineNumber: 13,
                                 columnNumber: 13
                             },
                             __self: this,
                             children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                                 __source: {
                                     fileName: "src/Components/Director-View/Director.jsx",
-                                    lineNumber: 22,
+                                    lineNumber: 14,
                                     columnNumber: 15
                                 },
                                 __self: this,
@@ -59165,7 +58973,7 @@ class DirectorView extends _react.Component {
                                         className: "text-lg text-center justify-center font-extrabold text-black",
                                         __source: {
                                             fileName: "src/Components/Director-View/Director.jsx",
-                                            lineNumber: 23,
+                                            lineNumber: 15,
                                             columnNumber: 17
                                         },
                                         __self: this,
@@ -59175,7 +58983,7 @@ class DirectorView extends _react.Component {
                                                 className: "absolute inset-0",
                                                 __source: {
                                                     fileName: "src/Components/Director-View/Director.jsx",
-                                                    lineNumber: 24,
+                                                    lineNumber: 16,
                                                     columnNumber: 19
                                                 },
                                                 __self: this
@@ -59187,7 +58995,7 @@ class DirectorView extends _react.Component {
                                         className: "mt-1 text-center text-sm text-gray-500",
                                         __source: {
                                             fileName: "src/Components/Director-View/Director.jsx",
-                                            lineNumber: 27,
+                                            lineNumber: 19,
                                             columnNumber: 17
                                         },
                                         __self: this,
@@ -59199,7 +59007,7 @@ class DirectorView extends _react.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx("div", {
                             __source: {
                                 fileName: "src/Components/Director-View/Director.jsx",
-                                lineNumber: 33,
+                                lineNumber: 24,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -59208,11 +59016,11 @@ class DirectorView extends _react.Component {
                                 onClick: ()=>{
                                     onBackClick(null);
                                 },
-                                className: "mt-14 group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500",
+                                className: "mt-14 mx-auto group relative w-24 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500",
                                 type: "submit",
                                 __source: {
                                     fileName: "src/Components/Director-View/Director.jsx",
-                                    lineNumber: 34,
+                                    lineNumber: 25,
                                     columnNumber: 15
                                 },
                                 __self: this,
@@ -59240,11 +59048,8 @@ $parcel$ReactRefreshHelpers$8283.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-/* import { MovieCard } from "../Movie-Card/MovieCard";
-import { MovieView } from "../Movie-View/MovieView"; */ parcelHelpers.export(exports, "Profile", ()=>Profile
-) /*movies.map((m) => (<Col key={m._id}>
-                  <MovieCard movie={m} />
-                </Col>*/ ;
+parcelHelpers.export(exports, "Profile", ()=>Profile
+);
 var _jsxRuntime = require("react/jsx-runtime");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
@@ -59310,14 +59115,6 @@ class Profile extends _react.Component {
           console.log("This movie was not deleted");
         });
       });
-  } */ /* onUserUpdate(authData) {
-    console.log(authData);
-    this.setState({
-      user: authData.user.Username,
-    });
-    localStorage.setItem("token", authData.token);
-    localStorage.setItem("user", authData.user.Username);
-    this.getUser(authData.token);
   } */ handleDeleteUser() {
         const token = localStorage.getItem("token");
         const user = localStorage.getItem("user");
@@ -59335,10 +59132,7 @@ class Profile extends _react.Component {
             console.log(error);
         });
     }
-    /* movie(movieId) {
-    return this.props.favoriteMovies.find((m) => m._id === movieId);
-  }
- */ render() {
+    render() {
         const { username , password , email , birthday , favoriteMovies  } = this.state;
         const { movies , user: user1  } = this.props;
         const FavoriteMovieList = movies.filter((m)=>{
@@ -59346,10 +59140,10 @@ class Profile extends _react.Component {
         });
         const movie1 = FavoriteMovieList.find((m)=>m._id
         );
-        /* movie={movies.find((m) => m._id === match.params.movieId)} */ return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+        return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
             __source: {
                 fileName: "src/Components/Profile-View/Profile.jsx",
-                lineNumber: 114,
+                lineNumber: 96,
                 columnNumber: 7
             },
             __self: this,
@@ -59357,7 +59151,7 @@ class Profile extends _react.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx("div", {
                     __source: {
                         fileName: "src/Components/Profile-View/Profile.jsx",
-                        lineNumber: 115,
+                        lineNumber: 97,
                         columnNumber: 9
                     },
                     __self: this,
@@ -59368,7 +59162,7 @@ class Profile extends _react.Component {
                         birthday: birthday,
                         __source: {
                             fileName: "src/Components/Profile-View/Profile.jsx",
-                            lineNumber: 116,
+                            lineNumber: 98,
                             columnNumber: 11
                         },
                         __self: this
@@ -59377,7 +59171,7 @@ class Profile extends _react.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx("div", {
                     __source: {
                         fileName: "src/Components/Profile-View/Profile.jsx",
-                        lineNumber: 124,
+                        lineNumber: 106,
                         columnNumber: 9
                     },
                     __self: this,
@@ -59387,7 +59181,7 @@ class Profile extends _react.Component {
                         ,
                         __source: {
                             fileName: "src/Components/Profile-View/Profile.jsx",
-                            lineNumber: 125,
+                            lineNumber: 107,
                             columnNumber: 11
                         },
                         __self: this
@@ -59396,7 +59190,7 @@ class Profile extends _react.Component {
                 /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                     __source: {
                         fileName: "src/Components/Profile-View/Profile.jsx",
-                        lineNumber: 131,
+                        lineNumber: 113,
                         columnNumber: 9
                     },
                     __self: this,
@@ -59404,7 +59198,7 @@ class Profile extends _react.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx("div", {
                             __source: {
                                 fileName: "src/Components/Profile-View/Profile.jsx",
-                                lineNumber: 132,
+                                lineNumber: 114,
                                 columnNumber: 11
                             },
                             __self: this,
@@ -59412,7 +59206,7 @@ class Profile extends _react.Component {
                                 className: "mt-6 text-center text-2xl font-extrabold text-gray-900",
                                 __source: {
                                     fileName: "src/Components/Profile-View/Profile.jsx",
-                                    lineNumber: 133,
+                                    lineNumber: 115,
                                     columnNumber: 13
                                 },
                                 __self: this,
@@ -59422,7 +59216,7 @@ class Profile extends _react.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx("div", {
                             __source: {
                                 fileName: "src/Components/Profile-View/Profile.jsx",
-                                lineNumber: 137,
+                                lineNumber: 119,
                                 columnNumber: 11
                             },
                             __self: this,
@@ -59430,7 +59224,7 @@ class Profile extends _react.Component {
                                     className: "group relative ",
                                     __source: {
                                         fileName: "src/Components/Profile-View/Profile.jsx",
-                                        lineNumber: 139,
+                                        lineNumber: 121,
                                         columnNumber: 15
                                     },
                                     __self: this,
@@ -59439,7 +59233,7 @@ class Profile extends _react.Component {
                                         movie: movie,
                                         __source: {
                                             fileName: "src/Components/Profile-View/Profile.jsx",
-                                            lineNumber: 140,
+                                            lineNumber: 122,
                                             columnNumber: 17
                                         },
                                         __self: this
@@ -59474,15 +59268,13 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _tailwindCss = require("tailwindcss/tailwind.css");
 var _reactRouterDom = require("react-router-dom");
 class FavMovies extends _react.Component {
-    /* movie(movieId) {
-    return this.props.favoriteMovies.find((m) => m._id === movieId);
-  } */ render() {
+    render() {
         const { movies , favoriteMovies , movie  } = this.props;
         return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
             className: "bg-white ",
             __source: {
                 fileName: "src/Components/Profile-View/FavMovies.jsx",
-                lineNumber: 14,
+                lineNumber: 10,
                 columnNumber: 7
             },
             __self: this,
@@ -59490,14 +59282,14 @@ class FavMovies extends _react.Component {
                 className: " max-w-2xl mx-auto py-16 px-4 sm:py-6 sm:px-3 lg:max-w-7xl lg:px-8",
                 __source: {
                     fileName: "src/Components/Profile-View/FavMovies.jsx",
-                    lineNumber: 15,
+                    lineNumber: 11,
                     columnNumber: 9
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                     __source: {
                         fileName: "src/Components/Profile-View/FavMovies.jsx",
-                        lineNumber: 16,
+                        lineNumber: 12,
                         columnNumber: 11
                     },
                     __self: this,
@@ -59506,7 +59298,7 @@ class FavMovies extends _react.Component {
                             className: "w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none",
                             __source: {
                                 fileName: "src/Components/Profile-View/FavMovies.jsx",
-                                lineNumber: 17,
+                                lineNumber: 13,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -59517,7 +59309,7 @@ class FavMovies extends _react.Component {
                                 className: "w-full h-full object-center object-cover lg:w-full lg:h-full",
                                 __source: {
                                     fileName: "src/Components/Profile-View/FavMovies.jsx",
-                                    lineNumber: 18,
+                                    lineNumber: 14,
                                     columnNumber: 15
                                 },
                                 __self: this
@@ -59527,14 +59319,14 @@ class FavMovies extends _react.Component {
                             className: "mt-4 flex justify-between",
                             __source: {
                                 fileName: "src/Components/Profile-View/FavMovies.jsx",
-                                lineNumber: 25,
+                                lineNumber: 21,
                                 columnNumber: 13
                             },
                             __self: this,
                             children: /*#__PURE__*/ _jsxRuntime.jsx("div", {
                                 __source: {
                                     fileName: "src/Components/Profile-View/FavMovies.jsx",
-                                    lineNumber: 26,
+                                    lineNumber: 22,
                                     columnNumber: 15
                                 },
                                 __self: this,
@@ -59542,7 +59334,7 @@ class FavMovies extends _react.Component {
                                     className: "text-lg justify-center font-extrabold text-black",
                                     __source: {
                                         fileName: "src/Components/Profile-View/FavMovies.jsx",
-                                        lineNumber: 27,
+                                        lineNumber: 23,
                                         columnNumber: 17
                                     },
                                     __self: this,
@@ -59552,7 +59344,7 @@ class FavMovies extends _react.Component {
                                             className: "absolute inset-0",
                                             __source: {
                                                 fileName: "src/Components/Profile-View/FavMovies.jsx",
-                                                lineNumber: 28,
+                                                lineNumber: 24,
                                                 columnNumber: 19
                                             },
                                             __self: this
@@ -59565,7 +59357,7 @@ class FavMovies extends _react.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx("div", {
                             __source: {
                                 fileName: "src/Components/Profile-View/FavMovies.jsx",
-                                lineNumber: 35,
+                                lineNumber: 31,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -59573,7 +59365,7 @@ class FavMovies extends _react.Component {
                                 to: `/movies/${movie._id}`,
                                 __source: {
                                     fileName: "src/Components/Profile-View/FavMovies.jsx",
-                                    lineNumber: 36,
+                                    lineNumber: 32,
                                     columnNumber: 15
                                 },
                                 __self: this,
@@ -59583,7 +59375,7 @@ class FavMovies extends _react.Component {
                                     type: "submit",
                                     __source: {
                                         fileName: "src/Components/Profile-View/FavMovies.jsx",
-                                        lineNumber: 37,
+                                        lineNumber: 33,
                                         columnNumber: 17
                                     },
                                     __self: this,
@@ -59597,27 +59389,7 @@ class FavMovies extends _react.Component {
         }));
     }
 }
-exports.default = FavMovies; /* <Row>
-        <Col md={8} className="movie-list">
-          <Card
-            border="warning"
-            style={{ width: "18rem" }}
-            className="movie-list"
-          >
-            <Card.Img
-              crossOrigin="https://imgur.com"
-              variant="top"
-              src={favoriteMovies.ImagePath}
-            />
-            <Card.Body>
-              <Card.Title>{favoriteMovies.Title}</Card.Title>
-              <Link to={`/movies/${movies._id}`}>
-                <Button variant="warning">Open</Button>
-              </Link>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row> */ 
+exports.default = FavMovies;
 
   $parcel$ReactRefreshHelpers$58fd.postlude(module);
 } finally {
@@ -59638,19 +59410,7 @@ var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _react = require("react");
 var _image = require("react-bootstrap/esm/Image");
-/* import {
-  Form,
-  Button,
-  Row,
-  Col,
-  Figure,
-  Card,
-  CardGroup,
-  Container,
-  ListGroup,
-  ListGroupItem,
-  CardDeck,
-} from "react-bootstrap"; */ var _tailwindCss = require("tailwindcss/tailwind.css");
+var _tailwindCss = require("tailwindcss/tailwind.css");
 var _s = $RefreshSig$();
 function UpdateUser(props) {
     _s();
@@ -59661,7 +59421,7 @@ function UpdateUser(props) {
         e.preventDefault();
         const username = localStorage.getItem("user");
         const token = localStorage.getItem("token");
-        /* console.log(username, password, email); */ _axiosDefault.default.put(`https://my-flix-2406.herokuapp.com/users/${username}`, {
+        _axiosDefault.default.put(`https://my-flix-2406.herokuapp.com/users/${username}`, {
             Password: password1,
             Email: email1
         }, {
@@ -59672,8 +59432,7 @@ function UpdateUser(props) {
             const password = response.data.Password;
             const email = response.data.Email;
             console.log(password, email);
-            /* setPassword({ password });
-        setEmail({ email }); */ window.open("/", "_self"); //Second argument is neccessary so that the page will open in the current tab
+            window.open("/", "_self"); //Second argument is neccessary so that the page will open in the current tab
             alert("Your profile has been updated");
             props.onUserUpdate(authData);
         }).catch((e)=>{
@@ -59684,7 +59443,7 @@ function UpdateUser(props) {
         className: "min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8",
         __source: {
             fileName: "src/Components/Profile-View/UpdateUser.jsx",
-            lineNumber: 56,
+            lineNumber: 42,
             columnNumber: 5
         },
         __self: this,
@@ -59692,7 +59451,7 @@ function UpdateUser(props) {
             className: "max-w-md w-full space-y-8",
             __source: {
                 fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                lineNumber: 57,
+                lineNumber: 43,
                 columnNumber: 7
             },
             __self: this,
@@ -59700,7 +59459,7 @@ function UpdateUser(props) {
                 /*#__PURE__*/ _jsxRuntime.jsx("div", {
                     __source: {
                         fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                        lineNumber: 58,
+                        lineNumber: 44,
                         columnNumber: 9
                     },
                     __self: this,
@@ -59708,7 +59467,7 @@ function UpdateUser(props) {
                         className: "mt-6 text-center text-2xl font-extrabold text-gray-900",
                         __source: {
                             fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                            lineNumber: 59,
+                            lineNumber: 45,
                             columnNumber: 11
                         },
                         __self: this,
@@ -59719,7 +59478,7 @@ function UpdateUser(props) {
                     className: "mt-8 ",
                     __source: {
                         fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                        lineNumber: 63,
+                        lineNumber: 49,
                         columnNumber: 9
                     },
                     __self: this,
@@ -59730,7 +59489,7 @@ function UpdateUser(props) {
                             defaultValue: "true",
                             __source: {
                                 fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                lineNumber: 64,
+                                lineNumber: 50,
                                 columnNumber: 11
                             },
                             __self: this
@@ -59739,7 +59498,7 @@ function UpdateUser(props) {
                             className: "rounded-md shadow-sm -space-y-px",
                             __source: {
                                 fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                lineNumber: 65,
+                                lineNumber: 51,
                                 columnNumber: 11
                             },
                             __self: this,
@@ -59747,7 +59506,7 @@ function UpdateUser(props) {
                                 /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                                     __source: {
                                         fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                        lineNumber: 66,
+                                        lineNumber: 52,
                                         columnNumber: 13
                                     },
                                     __self: this,
@@ -59757,7 +59516,7 @@ function UpdateUser(props) {
                                             className: "sr-only",
                                             __source: {
                                                 fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                                lineNumber: 67,
+                                                lineNumber: 53,
                                                 columnNumber: 15
                                             },
                                             __self: this,
@@ -59776,7 +59535,7 @@ function UpdateUser(props) {
                                             placeholder: "Username Change Disabled",
                                             __source: {
                                                 fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                                lineNumber: 70,
+                                                lineNumber: 56,
                                                 columnNumber: 15
                                             },
                                             __self: this
@@ -59786,7 +59545,7 @@ function UpdateUser(props) {
                                 /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                                     __source: {
                                         fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                        lineNumber: 82,
+                                        lineNumber: 68,
                                         columnNumber: 13
                                     },
                                     __self: this,
@@ -59796,7 +59555,7 @@ function UpdateUser(props) {
                                             className: "sr-only",
                                             __source: {
                                                 fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                                lineNumber: 83,
+                                                lineNumber: 69,
                                                 columnNumber: 15
                                             },
                                             __self: this,
@@ -59815,7 +59574,7 @@ function UpdateUser(props) {
                                             placeholder: "Password",
                                             __source: {
                                                 fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                                lineNumber: 86,
+                                                lineNumber: 72,
                                                 columnNumber: 15
                                             },
                                             __self: this
@@ -59825,7 +59584,7 @@ function UpdateUser(props) {
                                 /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                                     __source: {
                                         fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                        lineNumber: 98,
+                                        lineNumber: 84,
                                         columnNumber: 13
                                     },
                                     __self: this,
@@ -59835,7 +59594,7 @@ function UpdateUser(props) {
                                             className: "sr-only",
                                             __source: {
                                                 fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                                lineNumber: 99,
+                                                lineNumber: 85,
                                                 columnNumber: 15
                                             },
                                             __self: this,
@@ -59854,7 +59613,7 @@ function UpdateUser(props) {
                                             placeholder: "Email",
                                             __source: {
                                                 fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                                lineNumber: 102,
+                                                lineNumber: 88,
                                                 columnNumber: 15
                                             },
                                             __self: this
@@ -59866,7 +59625,7 @@ function UpdateUser(props) {
                         /*#__PURE__*/ _jsxRuntime.jsx("div", {
                             __source: {
                                 fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                lineNumber: 116,
+                                lineNumber: 102,
                                 columnNumber: 11
                             },
                             __self: this,
@@ -59876,7 +59635,7 @@ function UpdateUser(props) {
                                 onClick: handleSubmit,
                                 __source: {
                                     fileName: "src/Components/Profile-View/UpdateUser.jsx",
-                                    lineNumber: 117,
+                                    lineNumber: 103,
                                     columnNumber: 13
                                 },
                                 __self: this,
@@ -60060,22 +59819,7 @@ class UserInfo extends _react.Component {
         }));
     }
 }
-exports.default = UserInfo; /* Row>
-  <Col></Col>
-  <Col>
-    <Card border="warning" style={{ width: "25rem" }}>
-      <Card.Header>Profile Info</Card.Header>
-      <Card.Body>
-        <ListGroup variant="flush">
-          <ListGroup.Item>Username: {username} </ListGroup.Item>
-          {/* <ListGroup.Item>Password: {password} </ListGroup.Item> */  /*  <ListGroup.Item>Email: {email} </ListGroup.Item>
-          <ListGroup.Item>Birthday: {birthday} </ListGroup.Item>
-        </ListGroup>
-      </Card.Body>
-    </Card>
-  </Col>
-  <Col></Col>
-</Row> */ 
+exports.default = UserInfo;
 
   $parcel$ReactRefreshHelpers$f965.postlude(module);
 } finally {
