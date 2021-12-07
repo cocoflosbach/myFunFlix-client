@@ -95,10 +95,21 @@ export class Profile extends Component {
       });
   }
 
+  /* movie(movieId) {
+    return this.props.favoriteMovies.find((m) => m._id === movieId);
+  }
+ */
   render() {
     const { username, password, email, birthday, favoriteMovies } = this.state;
     const { movies, user } = this.props;
-    /* const movie = movies.find((movie) => movie._id === match.params.movieId); */
+    const FavoriteMovieList = movies.filter((m) => {
+      return this.state.favoriteMovies.includes(m._id);
+    });
+
+    const movie = FavoriteMovieList.find((m) => m._id);
+
+    /* movie={movies.find((m) => m._id === match.params.movieId)} */
+
     return (
       <div>
         <div>
@@ -124,9 +135,9 @@ export class Profile extends Component {
             </h2>
           </div>
           <div>
-            {favoriteMovies.map((movie) => (
+            {FavoriteMovieList.map((movie) => (
               <div key={movie.id} className="group relative ">
-                <FavMovies movie={movie} favoriteMovies={favoriteMovies} />
+                <FavMovies favoriteMovies={favoriteMovies} movie={movie} />
               </div>
             ))}
           </div>
