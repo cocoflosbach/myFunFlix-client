@@ -129,7 +129,7 @@ export class MovieView extends Component {
                 Add to Favorites
               </button>
             </div>
-            {/* <div>
+            <div>
               <button
                 variant="warning"
                 className="mt-4 group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
@@ -141,7 +141,7 @@ export class MovieView extends Component {
                 <HeartIcon className="block h-6 w-6" />
                 Remove from Favorites
               </button>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
