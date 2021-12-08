@@ -19,7 +19,7 @@ function MovieList(props) {
   if (!movies) return <div className="App" />;
 
   return (
-    <div className="mt-4 mx-auto w-screen ">
+    <div className="mt-4 mx-auto">
       <div>
         <VisibilityFilterInput visibilityFilter={visibilityFilter} />
       </div>

@@ -29136,7 +29136,7 @@ function MovieList(props) {
         __self: this
     }));
     return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
-        className: "mt-4 mx-auto w-screen ",
+        className: "mt-4 mx-auto",
         __source: {
             fileName: "src/Components/Movie-List/MovieList.jsx",
             lineNumber: 22,
