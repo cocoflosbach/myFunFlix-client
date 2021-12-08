@@ -3,10 +3,6 @@ import "tailwindcss/tailwind.css";
 import { Link } from "react-router-dom";
 
 class FavMovies extends Component {
-  /* movie(movieId) {
-    return this.props.favoriteMovies.find((m) => m._id === movieId);
-  } */
-
   render() {
     const { movies, favoriteMovies, movie } = this.props;
 
@@ -51,25 +47,3 @@ class FavMovies extends Component {
 }
 
 export default FavMovies;
-
-/* <Row>
-        <Col md={8} className="movie-list">
-          <Card
-            border="warning"
-            style={{ width: "18rem" }}
-            className="movie-list"
-          >
-            <Card.Img
-              crossOrigin="https://imgur.com"
-              variant="top"
-              src={favoriteMovies.ImagePath}
-            />
-            <Card.Body>
-              <Card.Title>{favoriteMovies.Title}</Card.Title>
-              <Link to={`/movies/${movies._id}`}>
-                <Button variant="warning">Open</Button>
-              </Link>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row> */

@@ -19,7 +19,7 @@ function MovieList(props) {
   if (!movies) return <div className="App" />;
 
   return (
-    <div className="mt-4 mx-auto w-screen ">
+    <div className="mt-4 mx-auto">
       <div>
         <VisibilityFilterInput visibilityFilter={visibilityFilter} />
       </div>
@@ -33,16 +33,6 @@ function MovieList(props) {
         </div>
       </div>
     </div>
-    /* <>
-      <Col md={12} style={{ margin: "1em" }}>
-        <VisibilityFilterInput visibilityFilter={visibilityFilter} />
-      </Col>
-      {filteredMovies.map((movie) => (
-        <Col key={movie._id}>
-          <MovieCard movie={movie} movies={movies} />
-        </Col>
-      ))}
-    </> */
   );
 }
 

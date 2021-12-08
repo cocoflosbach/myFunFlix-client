@@ -8,7 +8,6 @@ import { HeartIcon } from "@heroicons/react/solid";
 import FavButton from "../Favorite-List/FavButton";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
 
-/* import { Container, Button, Row, Col, Card } from "react-bootstrap"; */
 import { Link } from "react-router-dom";
 import "./MovieView.scss";
 import "tailwindcss/tailwind.css";
@@ -79,9 +78,6 @@ export class MovieView extends Component {
                   {movie.Description}
                 </p>
               </div>
-              {/* <p className="text-sm font-medium text-gray-900">
-                
-              </p> */}
             </div>
 
             <div className=" mt-4 grid grid-cols-1 gap-y-5 gap-x-3 sm:grid-cols-2">
@@ -145,80 +141,6 @@ export class MovieView extends Component {
           </div>
         </div>
       </div>
-      /* <Container className="Movieview">
-        <Row>
-          <Col></Col>
-          <Col>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img
-                className="Movieview-img"
-                crossOrigin="https://imgur.com"
-                variant="top"
-                src={movie.ImagePath}
-              />
-              <Card.Body>
-                <Card.Title className="Movieview-title">
-                  {movie.Title}
-                </Card.Title>
-                <Card.Text className="Movieview-text">
-                  {movie.Description}
-                </Card.Text>
-
-                <Button
-                  variant="warning"
-                  className="fav-button"
-                  value={movie._id}
-                  onClick={() => {
-                    this.addFavoriteMovie(movie);
-                  }}
-                >
-                  Add to Favorites
-                </Button>
-
-                <Button
-                  className="remove-fav"
-                  variant="warning"
-                  onClick={() => {
-                    this.removeFavoriteMovie(movie);
-                  }}
-                >
-                  Remove from Favorites
-                </Button>
-                <br />
-                <br />
-                <Button
-                  className="Movieview-Button"
-                  variant="warning"
-                  onClick={() => {
-                    onBackClick(null);
-                  }}
-                >
-                  Back
-                </Button>
-                <br />
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col></Col>
-        </Row>
-        <Row className="MovieView-GD-Buttons">
-          <Card>
-            <Col>
-              <Link to={`/directors/${movie.Director.Name}`}>
-                <Button className="Movieview-Button" variant="warning">
-                  Director
-                </Button>
-              </Link>
-              {"    "}
-              <Link to={`/genres/${movie.Genre.Name}`}>
-                <Button className="Movieview-Button" variant="warning">
-                  Genre
-                </Button>
-              </Link>
-            </Col>
-          </Card>
-        </Row>
-      </Container> */
     );
   }
 }

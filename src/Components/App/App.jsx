@@ -82,17 +82,6 @@ class App extends React.Component {
     });
   }
 
-  /* onUserUpdate(authData) {
-      console.log(authData);
-      this.setState({
-          password:,
-          email:
-      });
-      localStorage.setItem("token", authData.token);
-      localStorage.setItem("user", authData.token);
-      this.updateUser(authData.token);
-  } */
-
   render() {
     // SetMovies Redux step 7: movies is extracted from this.props rather than this.state
     const { movies } = this.props;
@@ -101,9 +90,8 @@ class App extends React.Component {
 
     return (
       <Router>
-        <NavigationBar />
-
         <div>
+          <NavigationBar />
           <Route
             exact
             path="/"

@@ -12,15 +12,10 @@ function VisibilityFilterInput(props) {
         id="visibility-search"
         value={props.VisibilityFilter}
         onChange={(e) => props.setFilter(e.target.value)}
-        className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm"
+        className=" mx-auto appearance-none rounded-none relative block w-10/12 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm"
         placeholder="Search Movies"
       />
     </div>
-    /* <Form.Control
-      onChange={(e) => props.setFilter(e.target.value)}
-      value={props.VisibilityFilter}
-      placeholder="Search Movies"
-    /> */
   );
 }
 

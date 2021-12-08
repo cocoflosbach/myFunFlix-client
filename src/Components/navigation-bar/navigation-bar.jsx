@@ -22,10 +22,6 @@ export class NavigationBar extends React.Component {
     const profile = `/users/${username}`;
     const logout = `/`;
 
-    /* const classNames = (...classes) => {
-      return classes.filter(Boolean).join(" ");
-    };
- */
     return (
       <Disclosure
         as="nav"
@@ -35,16 +31,17 @@ export class NavigationBar extends React.Component {
           <>
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 ">
               <div className="relative flex items-center justify-between h-24 ">
-                {/* <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"> */}
                 <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="block  h-24 w-30"
-                    crossOrigin="https://imgur.com"
-                    src="https://i.imgur.com/IOx97Xx.png"
-                    alt="Workflow"
-                  ></img>
+                  <a as={Link} href={`/`}>
+                    <img
+                      className="block  h-24 w-30"
+                      crossOrigin="https://imgur.com"
+                      src="https://i.imgur.com/IOx97Xx.png"
+                      alt="Workflow"
+                    ></img>
+                  </a>
                 </div>
-                {/* </div> */}
+
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 z-10 ">
                   <Menu as="div" className="ml-3 relative">
                     <div>
@@ -74,7 +71,7 @@ export class NavigationBar extends React.Component {
                               href={profile}
                               className={
                                 (active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700")
+                                "block px-4 py-2 text-sm text-gray-700 hover:text-gray-400 ")
                               }
                             >
                               Your Profile
@@ -89,7 +86,7 @@ export class NavigationBar extends React.Component {
                               href={`/`}
                               className={
                                 (active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700")
+                                "block px-4 py-2 text-sm text-gray-700 hover:text-gray-400")
                               }
                             >
                               Movies
@@ -104,7 +101,7 @@ export class NavigationBar extends React.Component {
                               onClick={this.onLoggedOut}
                               className={
                                 (active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700")
+                                "block px-4 py-2 text-sm text-gray-700 hover:text-gray-400")
                               }
                             >
                               Sign out
@@ -117,65 +114,9 @@ export class NavigationBar extends React.Component {
                 </div>
               </div>
             </div>
-
-            {/* <Disclosure.Panel className="sm:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                {navigation.map((item) => (
-                  <Disclosure.Button
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    className={classNames(
-                      item.current
-                        ? "bg-gray-900 text-black"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                      "block px-3 py-2 rounded-md text-base font-medium"
-                    )}
-                    aria-current={item.current ? "page" : undefined}
-                  >
-                    {item.name}
-                  </Disclosure.Button>
-                ))}
-              </div>
-            </Disclosure.Panel> */}
           </>
         )}
       </Disclosure>
-
-      /* <Container>
-        <Navbar collapseOnSelect fixed="top">
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav" />
-
-          <Container>
-            <Navbar.Brand as={Link} to={movies} className="link-text">
-              <img
-                alt=""
-                crossOrigin="https://imgur.com"
-                src="https://i.imgur.com/O6Q0azX.png"
-                width="130"
-                height="50"
-                className="d-inline-block align-top"
-              />{" "}
-            </Navbar.Brand>
-            <Nav className="me-auto">
-              <NavDropdown title="MENU" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to={movies} className="link-text">
-                  Movies
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to={profile} className="link-text">
-                  Profile
-                </NavDropdown.Item>
-
-                <NavDropdown.Divider />
-                <NavDropdown.Item to={"/"} onClick={this.onLoggedOut}>
-                  Log Out
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Container>
-        </Navbar>
-      </Container> */
     );
   }
 }

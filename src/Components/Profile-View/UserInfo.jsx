@@ -34,10 +34,6 @@ class UserInfo extends Component {
                 {birthday}
               </dd>
             </div>
-            {/* <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt className="text-sm font-medium text-gray-500">Password</dt>
-            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{password}</dd>
-          </div> */}
           </dl>
         </div>
       </div>
@@ -46,21 +42,3 @@ class UserInfo extends Component {
 }
 
 export default UserInfo;
-
-/* Row>
-  <Col></Col>
-  <Col>
-    <Card border="warning" style={{ width: "25rem" }}>
-      <Card.Header>Profile Info</Card.Header>
-      <Card.Body>
-        <ListGroup variant="flush">
-          <ListGroup.Item>Username: {username} </ListGroup.Item>
-          {/* <ListGroup.Item>Password: {password} </ListGroup.Item> */
-/*  <ListGroup.Item>Email: {email} </ListGroup.Item>
-          <ListGroup.Item>Birthday: {birthday} </ListGroup.Item>
-        </ListGroup>
-      </Card.Body>
-    </Card>
-  </Col>
-  <Col></Col>
-</Row> */

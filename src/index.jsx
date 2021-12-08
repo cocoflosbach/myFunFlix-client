@@ -15,7 +15,7 @@ class MyFunFlixApplication extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Container className="my-fun-flix">
+        <Container className="my-fun-flix mx-auto">
           <App />
         </Container>
       </Provider>
