@@ -970,7 +970,7 @@ class MyFunFlixApplication extends _react.Component {
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
-                className: "my-fun-flix",
+                className: "my-fun-flix mx-auto",
                 __source: {
                     fileName: "src/index.jsx",
                     lineNumber: 18,
@@ -22844,175 +22844,173 @@ var _tailwindCss = require("tailwindcss/tailwind.css");
         const { user: user1 , favoriteMovies  } = this.state;
         const movieID = movies.find((movie)=>movie._id === movies.id
         );
-        return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactRouterDom.BrowserRouter, {
+        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "src/Components/App/App.jsx",
                 lineNumber: 92,
                 columnNumber: 7
             },
             __self: this,
-            children: [
-                /*#__PURE__*/ _jsxRuntime.jsx(_navigationBar.NavigationBar, {
-                    __source: {
-                        fileName: "src/Components/App/App.jsx",
-                        lineNumber: 93,
-                        columnNumber: 9
-                    },
-                    __self: this
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                    __source: {
-                        fileName: "src/Components/App/App.jsx",
-                        lineNumber: 95,
-                        columnNumber: 9
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                            exact: true,
-                            path: "/",
-                            render: ()=>{
-                                if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                    className: "login-view",
-                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_login.LoginView, {
-                                        onLoggedIn: (user)=>this.onLoggedIn(user)
-                                    })
-                                }));
-                                if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                    className: "App"
-                                }));
-                                return(// SetMovies Redux step 8: Replace MovieCard with MovieList component
-                                /*movies.map((m) => (<Col key={m._id}>
+            children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                __source: {
+                    fileName: "src/Components/App/App.jsx",
+                    lineNumber: 93,
+                    columnNumber: 9
+                },
+                __self: this,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsx(_navigationBar.NavigationBar, {
+                        __source: {
+                            fileName: "src/Components/App/App.jsx",
+                            lineNumber: 94,
+                            columnNumber: 11
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        exact: true,
+                        path: "/",
+                        render: ()=>{
+                            if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                className: "login-view",
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_login.LoginView, {
+                                    onLoggedIn: (user)=>this.onLoggedIn(user)
+                                })
+                            }));
+                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                className: "App"
+                            }));
+                            return(// SetMovies Redux step 8: Replace MovieCard with MovieList component
+                            /*movies.map((m) => (<Col key={m._id}>
                   <MovieCard movie={m} />
                 </Col>*/ /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_movieListDefault.default, {
-                                        movies: movies
-                                    })
-                                }));
-                            },
-                            __source: {
-                                fileName: "src/Components/App/App.jsx",
-                                lineNumber: 96,
-                                columnNumber: 11
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                            path: "/register",
-                            render: ()=>{
-                                if (user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
-                                    to: "/"
-                                }));
-                                return(/*#__PURE__*/ _jsxRuntime.jsx(_registration.RegistrationView, {
-                                }));
-                            },
-                            __source: {
-                                fileName: "src/Components/App/App.jsx",
-                                lineNumber: 119,
-                                columnNumber: 11
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                            path: "/movies/:movieId",
-                            render: ({ match , history  })=>{
-                                if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_login.LoginView, {
-                                    onLoggedIn: (user)=>this.onLoggedIn(user)
-                                }));
-                                return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_movieView.MovieView, {
-                                        movies: movies,
-                                        movieID: movieID,
-                                        movie: movies.find((m)=>m._id === match.params.movieId
-                                        ),
-                                        onBackClick: ()=>history.goBack()
-                                    })
-                                }));
-                            },
-                            __source: {
-                                fileName: "src/Components/App/App.jsx",
-                                lineNumber: 127,
-                                columnNumber: 11
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                            path: "/genres/:name",
-                            render: ({ match , history  })=>{
-                                if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_login.LoginView, {
-                                    onLoggedIn: (user)=>this.onLoggedIn(user)
-                                }));
-                                if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                    className: "App"
-                                }));
-                                return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_genre.GenreView, {
-                                        genre: movies.find((m)=>m.Genre.Name === match.params.name
-                                        ).Genre,
-                                        onBackClick: ()=>history.goBack()
-                                    })
-                                }));
-                            },
-                            __source: {
-                                fileName: "src/Components/App/App.jsx",
-                                lineNumber: 147,
-                                columnNumber: 11
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                            path: "/directors/:name",
-                            render: ({ match , history  })=>{
-                                if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_login.LoginView, {
-                                    onLoggedIn: (user)=>this.onLoggedIn(user)
-                                }));
-                                if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                    className: "App"
-                                }));
-                                return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_director.DirectorView, {
-                                        director: movies.find((m)=>m.Director.Name === match.params.name
-                                        ).Director,
-                                        onBackClick: ()=>history.goBack()
-                                    })
-                                }));
-                            },
-                            __source: {
-                                fileName: "src/Components/App/App.jsx",
-                                lineNumber: 168,
-                                columnNumber: 11
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                            path: "/users/:username",
-                            render: ({ match , history  })=>{
-                                if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_login.LoginView, {
-                                    onLoggedIn: (user)=>this.onLoggedIn(user)
-                                }));
-                                if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                    className: "App"
-                                }));
-                                return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_profile.Profile, {
-                                        history: history,
-                                        movies: movies,
-                                        movie: movies.find((m)=>m._id === match.params.movieId
-                                        ),
-                                        onBackClick: ()=>history.goBack()
-                                    })
-                                }));
-                            },
-                            __source: {
-                                fileName: "src/Components/App/App.jsx",
-                                lineNumber: 190,
-                                columnNumber: 11
-                            },
-                            __self: this
-                        })
-                    ]
-                })
-            ]
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_movieListDefault.default, {
+                                    movies: movies
+                                })
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/Components/App/App.jsx",
+                            lineNumber: 95,
+                            columnNumber: 11
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/register",
+                        render: ()=>{
+                            if (user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
+                                to: "/"
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx(_registration.RegistrationView, {
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/Components/App/App.jsx",
+                            lineNumber: 118,
+                            columnNumber: 11
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/movies/:movieId",
+                        render: ({ match , history  })=>{
+                            if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_login.LoginView, {
+                                onLoggedIn: (user)=>this.onLoggedIn(user)
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_movieView.MovieView, {
+                                    movies: movies,
+                                    movieID: movieID,
+                                    movie: movies.find((m)=>m._id === match.params.movieId
+                                    ),
+                                    onBackClick: ()=>history.goBack()
+                                })
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/Components/App/App.jsx",
+                            lineNumber: 126,
+                            columnNumber: 11
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/genres/:name",
+                        render: ({ match , history  })=>{
+                            if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_login.LoginView, {
+                                onLoggedIn: (user)=>this.onLoggedIn(user)
+                            }));
+                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                className: "App"
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_genre.GenreView, {
+                                    genre: movies.find((m)=>m.Genre.Name === match.params.name
+                                    ).Genre,
+                                    onBackClick: ()=>history.goBack()
+                                })
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/Components/App/App.jsx",
+                            lineNumber: 146,
+                            columnNumber: 11
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/directors/:name",
+                        render: ({ match , history  })=>{
+                            if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_login.LoginView, {
+                                onLoggedIn: (user)=>this.onLoggedIn(user)
+                            }));
+                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                className: "App"
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_director.DirectorView, {
+                                    director: movies.find((m)=>m.Director.Name === match.params.name
+                                    ).Director,
+                                    onBackClick: ()=>history.goBack()
+                                })
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/Components/App/App.jsx",
+                            lineNumber: 167,
+                            columnNumber: 11
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/users/:username",
+                        render: ({ match , history  })=>{
+                            if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_login.LoginView, {
+                                onLoggedIn: (user)=>this.onLoggedIn(user)
+                            }));
+                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                className: "App"
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_profile.Profile, {
+                                    history: history,
+                                    movies: movies,
+                                    movie: movies.find((m)=>m._id === match.params.movieId
+                                    ),
+                                    onBackClick: ()=>history.goBack()
+                                })
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/Components/App/App.jsx",
+                            lineNumber: 189,
+                            columnNumber: 11
+                        },
+                        __self: this
+                    })
+                ]
+            })
         }));
     }
 }

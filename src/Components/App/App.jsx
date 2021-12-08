@@ -90,9 +90,8 @@ class App extends React.Component {
 
     return (
       <Router>
-        <NavigationBar />
-
         <div>
+          <NavigationBar />
           <Route
             exact
             path="/"
