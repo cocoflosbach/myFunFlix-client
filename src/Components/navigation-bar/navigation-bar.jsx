@@ -19,13 +19,13 @@ export class NavigationBar extends React.Component {
   render() {
     const username = localStorage.getItem("user");
     const movies = `/`;
-    const profile = `/users/${username}`;
+    const profile = `#/users/${username}`;
     const logout = `/`;
 
     return (
       <Disclosure
         as="nav"
-        className="bg-white w-screen border-gray-300 border-double border-b-4 "
+        className="bg-white border-gray-300 border-double border-b-4 "
       >
         {({ open }) => (
           <>
