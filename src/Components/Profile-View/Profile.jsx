@@ -43,8 +43,6 @@ export class Profile extends Component {
           email: response.data.Email,
           birthday: response.data.Birthday,
           favoriteMovies: response.data.FavoriteMovies,
-        }).catch((e) => {
-          console.log(error);
         });
       });
   }
@@ -116,7 +114,7 @@ export class Profile extends Component {
               Your Favorite Movies
             </h2>
           </div>
-          <div>
+          <div className=" grid grid-cols-1 gap-y-5 gap-x-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-x-8 ">
             {FavoriteMovieList.map((movie) => (
               <div key={movie.id} className="group relative ">
                 <FavMovies favoriteMovies={favoriteMovies} movie={movie} />
