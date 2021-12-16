@@ -24,9 +24,7 @@ class FavMovies extends Component {
                   <span aria-hidden="true" className="absolute inset-0" />
                   {movie.Title}
                 </h3>
-                {/* <p className="mt-1 text-sm text-gray-500">{product.color}</p> */}
               </div>
-              {/* <p className="text-sm font-medium text-gray-900">{product.price}</p> */}
             </div>
             <div>
               <Link to={`/movies/${movie._id}`}>
