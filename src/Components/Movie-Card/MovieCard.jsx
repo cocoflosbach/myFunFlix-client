@@ -12,14 +12,14 @@ export class MovieCard extends Component {
         <div className=" max-w-2xl  mx-auto py-16 px-4 sm:py-6 sm:px-3 lg:max-w-7xl lg:px-8">
           <div>
             <div className="w-full h-80 bg-gray-200 aspect-w-1 aspect-h-1 shadow-md rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-              <a as={Link} href={`/movies/${movie._id}`}>
+              <Link to={`/movies/${movie._id}`}>
                 <img
                   crossOrigin="https://imgur.com"
                   variant="top"
                   src={movie.ImagePath}
                   className="w-full h-full object-center object-cover lg:w-full lg:h-full"
                 />
-              </a>
+              </Link>
             </div>
             <div className="mt-4 flex justify-between">
               <div>

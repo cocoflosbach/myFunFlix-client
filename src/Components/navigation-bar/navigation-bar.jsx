@@ -32,14 +32,14 @@ export class NavigationBar extends React.Component {
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 ">
               <div className="relative flex items-center justify-between h-24 ">
                 <div className="flex-shrink-0 flex items-center">
-                  <a as={Link} href={`/`}>
+                  <Link to={`/`}>
                     <img
                       className="block  h-24 w-30"
                       crossOrigin="https://imgur.com"
                       src="https://i.imgur.com/IOx97Xx.png"
                       alt="Workflow"
                     ></img>
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 z-10 ">
