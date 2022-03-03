@@ -32,11 +32,8 @@ Director view
 
 ## Live website
 
-```bash
-
 Visit myFunFlix React Client [here](https://myfunflix.netlify.app/#/) and sign up to explore the app!
 
-```
 
 ## Built With
 
