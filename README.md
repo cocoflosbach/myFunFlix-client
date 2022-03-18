@@ -2,7 +2,7 @@
 
 ## Project Description
 
-Built Using React, this is the client-side for a mpvie directory application called myFunFlix based on its existing
+Built Using React, this is the client-side for a movie directory application called myFunFlix based on its existing
 server-side code (REST API and database).
 
 ## Essential Views and Features
